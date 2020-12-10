@@ -9,7 +9,6 @@ import logica.controladora.ControlHorario;
 import logica.controladora.ControlJuego;
 import logica.controladora.ControlUsuario;
 import logica.validador.ValidaCliente;
-import logica.validador.ValidaContacto;
 import logica.validador.ValidaEmpleado;
 import logica.validador.ValidaEntrada;
 import logica.validador.ValidaHorario;

@@ -20,95 +20,163 @@ public class Parque {
    
     public static void main(String[] args) throws UsuarioException, JuegoException {
         
+        /*
         ControladoraFactory factory = new ControladoraFactory();
         
-        Usuario usu = new Usuario();
-        usu.setNombre("PRIMER");
-        usu.setContrasenia("PRUEBA");
+        Usuario usu1 = new Usuario();
+        usu1.setNombre("ADSFSFSF");
+        usu1.setContrasenia("DDDDDDDDDDDDD");
         
         
         ControlUsuario cusu = factory.createControlUsuario();
-        if(cusu.creaUsuario(usu)){
+        if(cusu.creaUsuario(usu1)){
             System.out.println("AGREGO EL USUARIO");
         } else {
             System.out.println("NO USUARIO");
         }        
         
 
-        Empleado emp = new Empleado();
-        emp.setNombre("Pepe");
-        emp.setApellido("Argento");
-        emp.setUsuario(usu);        
+        Empleado emp1 = new Empleado();
+        emp1.setNombre("AAAAAAA");
+        emp1.setApellido("BBBBBBBBBBB");
+        emp1.setUsuario(usu1);        
         
         ControlEmpleado cemp = factory.createControlEmpleado();
-        if(cemp.creaEmpleado(emp)){
+        if(cemp.creaEmpleado(emp1)){
             System.out.println("AGREGO EL EMPLEADO");
         } else {
             System.out.println("NO EMPLEADO");
         }
         
-        Cliente cli = new Cliente();
-        cli.setNombre("Alguien");
-        cli.setApellido("Loco");
-        cli.setTelefono("11-2222-3333");
-        cli.setMail("algo@jjj.com");
+        
+        Cliente cli1 = new Cliente();
+        cli1.setNombre("SFSDFFF");
+        cli1.setApellido("FSDFSDFSLoco");
+        cli1.setTelefono("11-2322-3333");
+        cli1.setMail("algoSS@jjj.com");
+        
         
         ControlCliente ccli = factory.createControlCliente();
-        if(ccli.creaCliente(cli)){
+        if(ccli.creaCliente(cli1)){
             System.out.println("AGREGO EL CLIENTE");
         } else {
             System.out.println("NO CLIENTE");
         }
         
-        Juego juego = new Juego();
-        juego.setNombre("tobogan");
+        
+        
+        Juego juego1 = new Juego();
+        juego1.setNombre("tFSDFSFSFSobogan");
         
         List<Empleado> listEmp = new ArrayList<>();
-        listEmp.add(emp);
+        listEmp.add(emp1);
         
-        juego.setListaEmpleado(listEmp);
+        juego1.setListaEmpleado(listEmp);
         
         
         ControlJuego cjue = factory.createControlJuego();
-        if(cjue.creaJuego(juego)){
+        if(cjue.creaJuego(juego1)){
             System.out.println("AGREGO EL JUEGO");
         } else {
             System.out.println("NO JUEGO");
         }
-        
-        Horario horario = new Horario();
-        horario.setHora_inicio("17");
-        horario.setHora_fin("18");
+                
+
+        Horario horario1 = new Horario();
+        horario1.setHora_inicio("09");
+        horario1.setHora_fin("11");
         
         List<Juego> listJuego = new ArrayList<>();
-        listJuego.add(juego);
+        listJuego.add(juego1);
         
-        horario.setListaJuegos(listJuego);
+        horario1.setListaJuegos(listJuego);
         
         
         ControlHorario cohor = factory.createControlHorario();
-        if(cohor.creaHorario(horario)){
+        if(cohor.creaHorario(horario1)){
             System.out.println("AGREGO EL HORARIO");
         } else {
             System.out.println("NO HORARIO");
         }
-       
+              
         
-     
-        Entrada entrada = new Entrada();
-        entrada.setCliente(cli);
-        entrada.setEmpleado(emp);
-        entrada.setJuego(juego);
+        Entrada entrada1 = new Entrada();
+        entrada1.setCliente(cli1);
+        entrada1.setEmpleado(emp1);
+        entrada1.setJuego(juego1);
         LocalDate dia = LocalDate.now();   
         String prueba = dia.toString();
-        entrada.setFecha(prueba);
+        entrada1.setFecha(prueba);             
+       
         
         ControlEntrada centr = factory.createControlEntrada();
-        if(centr.creaEntrada(entrada)){
+        if(centr.creaEntrada(entrada1)){
             System.out.println("AGREGO EL ENTRADA");
         } else {
             System.out.println("NO ENTRADA");
         }
+        
+        */
+        
+        // PRIMER QUERY PEDIDO
+        /*
+        public int blabla( String dia)
+        ControlEntrada centr = factory.createControlEntrada();
+        int cantEntradas=0;
+        List<Entrada> primeraLista = centr.traerEntradas();
+        for (Entrada element : primeraLista){
+            if(element.getFecha().equals("2020-12-10")){
+                System.out.println(element.getCliente().getNombre() + 
+                        element.getEmpleado().getNombre() + 
+                        element.getJuego().getNombre());
+                
+                cantEntradas++;
+            }
+        Mostrar en pantalla de alguna manera esta cantidad de entradas vendidas segun el dia
+        }
+        
+        // SEGUNDO QUERY PEDIDO
+        public int (String dia, String empleado, String juego)
+        
+        ControlEntrada centr = factory.createControlEntrada();
+        int cantEntradas=0;
+        List<Entrada> primeraLista = centr.traerEntradas();
+        for (Entrada element : primeraLista){
+            if(element.getFecha().equals("2020-12-10") && 
+                element.getEmpleado().getNombre().equals(empleado) &&
+                element.getJuego().getNombre().equals(juego)){
+                System.out.println(element.getCliente().getNombre() + 
+                        element.getEmpleado().getNombre() + 
+                        element.getJuego().getNombre());
+                
+                cantEntradas++;
+            }
+        Mostrar en pantalla de alguna manera esta cantidad de entradas vendidas segun el dia
+        }
+        
+        //TERCER QUERY PEDIDO
+       //public List<Empleado> segunJuego(String juego)
+        ControladoraFactory factory = new ControladoraFactory();
+        ControlJuego cjue = factory.createControlJuego();
+        List<Juego> listaJuego = cjue.traerJuego();
+        int idJuego=0;
+        for (Juego element : listaJuego){
+            if(element.getNombre().equals("tFSDFSFSFSobogan")){
+                idJuego=element.getJuego_id();
+            }
+        }
+        Juego jueguito = cjue.traerJuegoEnParticular(idJuego);
+        for (Empleado elem : jueguito.getListaEmpleado()){
+            System.out.println(elem.getNombre() + " " + elem.getApellido());
+        }
+        
+        //Mostrar en pantalla de alguna manera esta cantidad de entradas vendidas segun el dia
+        
+        */
+        
+        
+        
+        
         
         
         

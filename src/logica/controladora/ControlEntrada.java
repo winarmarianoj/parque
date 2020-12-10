@@ -52,8 +52,6 @@ public class ControlEntrada {
     //Devuelve a un Entrada en Particular
     public Entrada traerEntradaEnParticular(int id) {
         return cent.traerUnEntrada(id);
-    }
-    
-    
+    }  
     
 }
