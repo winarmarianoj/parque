@@ -2,18 +2,26 @@
 package logica.factory;
 
 import logger.Errors;
-import logica.controladora.ControlContacto;
+import logica.controladora.ControlCliente;
+import logica.controladora.ControlEmpleado;
+import logica.controladora.ControlEntrada;
 import logica.controladora.ControlHorario;
 import logica.controladora.ControlJuego;
 import logica.controladora.ControlUsuario;
+import logica.validador.ValidaCliente;
 import logica.validador.ValidaContacto;
+import logica.validador.ValidaEmpleado;
+import logica.validador.ValidaEntrada;
 import logica.validador.ValidaHorario;
 import logica.validador.ValidaJuego;
 import logica.validador.ValidaUsuario;
-import persistencia.ControlPersisContacto;
+import persistencia.ControlPersisCliente;
+import persistencia.ControlPersisEmpleado;
+import persistencia.ControlPersisEntrada;
 import persistencia.ControlPersisHorario;
 import persistencia.ControlPersisJuego;
 import persistencia.ControlaPersisUsuario;
+import persistencia.JPA.EmpleadoJpaController;
 
 
 public class ControladoraFactory {
@@ -39,11 +47,24 @@ public class ControladoraFactory {
         return new ControlJuego(vjue,cjue,errors);
     }
     
-    public ControlContacto createControlContacto(){
-        ValidaContacto vcon = new ValidaContacto();
-        ControlPersisContacto ccon = new ControlPersisContacto();
+    public ControlCliente createControlCliente(){
+        ValidaCliente vcli = new ValidaCliente();
+        ControlPersisCliente ccli = new ControlPersisCliente();
         Errors errors = Errors.getInstance();
-        return new ControlContacto(vcon,ccon,errors);
+        return new ControlCliente(vcli,ccli,errors);
     }
     
+    public ControlEmpleado createControlEmpleado(){
+        ValidaEmpleado vemp = new ValidaEmpleado();
+        ControlPersisEmpleado cemp = new ControlPersisEmpleado();
+        Errors errors = Errors.getInstance();
+        return new ControlEmpleado(vemp,cemp,errors);
+    }
+    
+    public ControlEntrada createControlEntrada(){
+        ValidaEntrada vent = new ValidaEntrada();
+        ControlPersisEntrada cent = new ControlPersisEntrada();
+        Errors errors = Errors.getInstance();
+        return new ControlEntrada(vent,cent,errors);
+    }
 }

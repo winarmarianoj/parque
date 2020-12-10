@@ -22,12 +22,13 @@ public class ControlUsuario {
         this.errors = errors;
     }
     
+    
     //Crea Usuario
     public boolean creaUsuario(Usuario usu) throws UsuarioException{
         boolean res = false;        
         try{
             if(validusu.validUser(usu)){
-            res = cusu.createUsuario(usu);
+                res = cusu.createUsuario(usu);
             }
         } catch(UsuarioException e){
             errors.logError(e.getMessage());
@@ -54,6 +55,8 @@ public class ControlUsuario {
     public Usuario traerUsuarioEnParticular(int id) {
         return cusu.traerUnUsuario(id);
     }
+    
+    
 
 
 }

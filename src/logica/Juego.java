@@ -17,7 +17,7 @@ public class Juego implements Serializable {
     int juego_id;
     
     @Basic
-    String nombre;
+    String nombre;    
     
     @OneToMany
     List <Empleado> listaEmpleado;

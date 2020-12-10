@@ -9,14 +9,15 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Empleado extends Persona implements Serializable{
+public class Empleado implements Serializable{
     
     @Id
     @GeneratedValue (strategy=GenerationType.SEQUENCE)
-    int empleado_id;
+    int empleado_id; 
     
     @Basic
-    String cargo;
+    String nombre;
+    String apellido;
     
     @OneToOne
     Usuario usuario;    
@@ -24,21 +25,12 @@ public class Empleado extends Persona implements Serializable{
     public Empleado() {
     }
 
-    public Empleado(int empleado_id, String cargo, Usuario usuario) {
+    public Empleado(int empleado_id, String nombre, String apellido, Usuario usuario) {
         this.empleado_id = empleado_id;
-        this.cargo = cargo;
+        this.nombre = nombre;
+        this.apellido = apellido;
         this.usuario = usuario;
     }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-    
-    
 
     public int getEmpleado_id() {
         return empleado_id;
@@ -48,14 +40,6 @@ public class Empleado extends Persona implements Serializable{
         this.empleado_id = empleado_id;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-    
     public String getNombre() {
         return nombre;
     }
@@ -71,16 +55,15 @@ public class Empleado extends Persona implements Serializable{
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
     
-
-    @Override
-    public boolean logueoEmpleado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean entradaCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

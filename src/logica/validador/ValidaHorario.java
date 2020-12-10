@@ -13,9 +13,9 @@ public class ValidaHorario {
     }
 
     private boolean validHoraInicio(String hora_inicio) {
-        return !hora_inicio.isEmpty() && hora_inicio != null;
+        return !hora_inicio.isEmpty();
     }
     private boolean validHoraFin(String hora_fin){
-        return !hora_fin.isEmpty() && hora_fin != null;
+        return !hora_fin.isEmpty();
     }
 }

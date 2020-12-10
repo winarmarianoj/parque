@@ -36,27 +36,32 @@ public class ClienteJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Cliente cliente) {
+    public boolean create(Cliente cliente) {
         EntityManager em = null;
+        boolean res = false;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
             em.persist(cliente);
             em.getTransaction().commit();
+            res = true;
         } finally {
             if (em != null) {
                 em.close();
             }
         }
+        return res;
     }
 
-    public void edit(Cliente cliente) throws NonexistentEntityException, Exception {
+    public boolean edit(Cliente cliente) throws NonexistentEntityException, Exception {
         EntityManager em = null;
+        boolean res = false;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
             cliente = em.merge(cliente);
             em.getTransaction().commit();
+            res = true;
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
@@ -71,10 +76,12 @@ public class ClienteJpaController implements Serializable {
                 em.close();
             }
         }
+        return res;
     }
 
-    public void destroy(int id) throws NonexistentEntityException {
+    public boolean destroy(int id) throws NonexistentEntityException {
         EntityManager em = null;
+        boolean res = false;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
@@ -87,11 +94,13 @@ public class ClienteJpaController implements Serializable {
             }
             em.remove(cliente);
             em.getTransaction().commit();
+            res = true;
         } finally {
             if (em != null) {
                 em.close();
             }
         }
+        return res;
     }
 
     public List<Cliente> findClienteEntities() {

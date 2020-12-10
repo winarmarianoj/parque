@@ -40,8 +40,9 @@ public class UsuarioJpaController implements Serializable {
             if (em != null) {
                 em.close();
             }
+            return res;
         }
-        return res;
+        
     }
 
     public boolean edit(Usuario usuario) throws NonexistentEntityException, Exception {

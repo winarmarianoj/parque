@@ -13,7 +13,7 @@ public class ValidaJuego {
     }
 
     private boolean validNombre(String nombre) {
-        return !nombre.isEmpty() && nombre != null;
+        return !nombre.isEmpty();
     }
     
 }

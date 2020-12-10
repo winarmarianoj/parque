@@ -6,8 +6,6 @@ import javax.persistence.Entity;
 public abstract class Persona {
    
     String nombre;
-    String apellido;
+    String apellido;   
     
-    public abstract boolean logueoEmpleado();
-    public abstract boolean entradaCliente();
 }

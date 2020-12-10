@@ -10,13 +10,14 @@ public class ValidaUsuario {
         res &= validPass(usu.getContrasenia());
         
         if(!res){throw new UsuarioException();}
+        
         return res;
     }
 
     private boolean validNombre(String nombre) {
-        return !nombre.isEmpty() && nombre != null;
+        return !nombre.isEmpty();
     }
     private boolean validPass(String pass){
-        return !pass.isEmpty() && pass != null;
+        return !pass.isEmpty();
     }
 }

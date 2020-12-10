@@ -26,7 +26,7 @@ public class ControlJuego {
         boolean res = false;        
         try{
             if(vjue.validJuego(jue)){
-            res = cjue.createJuego(jue);
+                res = cjue.createJuego(jue);
             }
         } catch(JuegoException e){
             errors.logError(e.getMessage());
@@ -53,8 +53,5 @@ public class ControlJuego {
     public Juego traerJuegoEnParticular(int id) {
         return cjue.traerUnJuego(id);
     }
-
-    
-    
     
 }

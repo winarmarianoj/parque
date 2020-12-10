@@ -16,16 +16,18 @@ public class Usuario {
     @Basic
     String nombre;
     String contrasenia;
+    boolean conectado;
 
     public Usuario() {
     }
 
-    public Usuario(int usuario_id, String nombre, String contrasenia) {
+    public Usuario(int usuario_id, String nombre, String contrasenia, boolean conectado) {
         this.usuario_id = usuario_id;
         this.nombre = nombre;
         this.contrasenia = contrasenia;
+        this.conectado = conectado;
     }
-
+    
     public int getUsuario_id() {
         return usuario_id;
     }
@@ -49,5 +51,21 @@ public class Usuario {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
+
+    public boolean isConectado() {
+        return conectado;
+    }
+
+    public void setConectado(boolean conectado) {
+        this.conectado = conectado;
+    }
     
+    public void logueoEmpleado() {
+        setConectado(true);
+    }
+    
+    public void logoutEmpleado(){
+        setConectado(false);
+    }
+        
 }
