@@ -27,13 +27,13 @@ class UIFunctions {
 	    return resName;
 	}
 
-	// Funcion que supervisa si el email cumple con los reqmsgsitos
+	// Funcion que supervisa si el email cumple con los requisitos
 	isEmailCorrect(emailAddRegister, typeEmail){
 	    let resEmail = false;
 	    if (emailRegex.test(emailAddRegister)){
 	    	resEmail = true;
 	    } else{
-	    	setTimeout(msg.invalidEmail(typeEmail + ' ' + 'Email ingresado incorrectamente. Intentelo nuevamente por favor.'),2000);
+	    	setTimeout(msg.invalidEmail(typeEmail + ' ' + 'ingresado incorrectamente. Intentelo nuevamente por favor.'),2000);
 	    }
 	    return resEmail;
  	}
@@ -72,50 +72,15 @@ class UIFunctions {
 	}
 
 	// Funcion que supervisa que los numeros asi lo sean
-	isNumber(num){
+	isNumber(num, typeNum){
 	    let resNumber = false;
 	    if (numberRegex.test(num)){
 	    	resNumber = true;
 	    } else{
-	    	setTimeout(msg.invalidNumber('Los datos deben ser numéricos.'),2000);
+	    	setTimeout(msg.invalidNumber(typeNum + ' ' + 'deben ser numéricos.'),2000);
 	    }	
 	    return resNumber;
-	}
-
-	// Funcion que revisa toda la fecha por cada campo y condición
-	isFecha(checkin){
-	    let resulFecha = true;
-	    if(checkin.year<1915 || checkin.year>2005){setTimeout(msg.invalidYear('Debes ingresar un año válido. No se permiten menores de 15 años.'),2000);resulFecha=false;}
-	    if(checkin.month<=0 || checkin.month>12){setTimeout(msg.invalidMonth('Debes ingresar un mes válido. Son del 1 al 12'),2000);resulFecha=false;}
-	    if(checkin.day<=0 || checkin.day>31){setTimeout(msg.invalidDay('Debes ingresar un día válido. Son del 1 al 31.'),2000);resulFecha=false;}
-	    if(checkin.month == 2 && checkin.day == 29){
-	        if(!isBisiesto(checkin.year)){
-	            setTimeout(msg.invalidBisiesto('El año ingresado no es bisiesto. Revise la fecha completa. Gracias.'),2000);
-	            resulFecha=false;
-	        }
-	    }
-	    return resulFecha;
-	}
-
-	isFechaComplete(checkin){
-		let resulFecha = true;
-		if(checkin.birthdate.year<1915 || checkin.birthdate.year>2005){setTimeout(msg.invalidYear('Debes ingresar un año válido. No se permiten menores de 15 años.'),2000);resulFecha=false;}
-		if(checkin.birthdate.month<=0 || checkin.birthdate.month>12){setTimeout(msg.invalidMonth('Debes ingresar un mes válido. Son del 1 al 12'),2000);resulFecha=false;}
-		if(checkin.birthdate.day<=0 || checkin.birthdate.day>31){setTimeout(msg.invalidDay('Debes ingresar un día válido. Son del 1 al 31.'),2000);resulFecha=false;}
-		if(checkin.birthdate.month == 2 && checkin.birthdate.day == 29){
-			if(!isBisiesto(checkin.birthdate.year)){
-				setTimeout(msg.invalidBisiesto('El año ingresado no es bisiesto. Revise la fecha completa. Gracias.'),2000);
-				resulFecha=false;
-			}
-		}
-		return resulFecha;
-	}
-
-
-	// Funcion que analiza un año bisiesto o no
-	isBisiesto(years){
-	    return years % 100 === 0? years % 400 === 0 : years % 4 === 0;
-	}
+	}	
 
 	// Funcion que agrega errores a la lista de errores
 	saveErrorsList(text){

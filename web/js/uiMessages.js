@@ -6,7 +6,7 @@ class UIMessages {
         element.innerHTML = info;
         linksList.appendChild(element);
 
-        // Remove the Message after al segundo y medio
+        // Remove the Message after a los dos segundos y medio
         setTimeout(function () {
             document.querySelector(".alert").remove();
         }, 2500);
@@ -47,7 +47,7 @@ class UIMessages {
     withImg() {
         Swal.fire({
             imageUrl: '../img/logos.png',
-            imageHeight: 200,
+            imageHeight: 80,
             imageAlt: 'A tall image',
             title: 'Welcome',
         });
@@ -103,56 +103,13 @@ class UIMessages {
             title: 'Error',
             text: text6,
         });
-    }
-    invalidYear(text7) {
-        Swal.fire({
-            type: 'error',
-            title: 'Error',
-            text: text7,
-        });
-    }
-    invalidMonth(text8) {
-        Swal.fire({
-            type: 'error',
-            title: 'Error',
-            text: text8,
-        });
-    }
-    invalidDay(text9) {
-        Swal.fire({
-            type: 'error',
-            title: 'Error',
-            text: text9,
-        });
-    }
-    invalidBisiesto(text10) {
-        Swal.fire({
-            type: 'error',
-            title: 'Error',
-            text: text10,
-        });
-    }
-    linksEmpty(){
-        Swal.fire({
-            type: 'error',
-            title: 'Error',
-            text: 'No contienes ningún elemento en tu lista de Links.',
-        });
-    }
+    }    
 
     invalidPassword(text11) {
         Swal.fire({
             type: 'error',
             title: 'Error',
             text: text11,
-        });
-    }
-
-    invalidCaptcha() {
-        Swal.fire({
-            type: 'error',
-            title: 'Error',
-            text: 'Debe completar el captcha.',
         });
     }
 }
