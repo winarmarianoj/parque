@@ -1,0 +1,26 @@
+.institucional {
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+  left: 0;
+}
+
+.f-left{
+    margin-left: 0%;
+    left: 0;
+}
+.f-right{
+    margin-right: 0%;
+    right: 0;
+}
+.clima{
+  margin-left: 55%;
+}
+.titulos{
+  font-family: Verdana;
+  font-size: 3rem;
+  color: blueviolet;
+}
+.dash{
+  margin-top: 0%;
+}

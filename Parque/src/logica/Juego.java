@@ -17,7 +17,10 @@ public class Juego implements Serializable {
     int juego_id;
     
     @Basic
-    String nombre;    
+    String nombre;
+    String edadMinima;
+    String capacidad;
+    String categoria;	    
     
     @OneToMany
     List <Empleado> listaEmpleado;
