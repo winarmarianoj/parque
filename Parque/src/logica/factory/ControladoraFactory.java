@@ -1,4 +1,3 @@
-
 package logica.factory;
 
 import logger.Errors;
@@ -8,53 +7,48 @@ import logica.controladora.ControlEntrada;
 import logica.controladora.ControlHorario;
 import logica.controladora.ControlJuego;
 import logica.controladora.ControlUsuario;
-import logica.validador.ValidaCliente;
-import logica.validador.ValidaEmpleado;
 import logica.validador.ValidaEntrada;
-import logica.validador.ValidaHorario;
-import logica.validador.ValidaJuego;
-import logica.validador.ValidaUsuario;
+import logica.validador.Validar;
 import persistencia.ControlPersisCliente;
 import persistencia.ControlPersisEmpleado;
 import persistencia.ControlPersisEntrada;
 import persistencia.ControlPersisHorario;
 import persistencia.ControlPersisJuego;
 import persistencia.ControlaPersisUsuario;
-import persistencia.JPA.EmpleadoJpaController;
 
 
 public class ControladoraFactory {
     
     public ControlUsuario createControlUsuario(){
-        ValidaUsuario validaUsuario = new ValidaUsuario();
+        Validar vusu = new Validar();
         ControlaPersisUsuario cusu = new ControlaPersisUsuario();
         Errors errors = Errors.getInstance();        
-        return new ControlUsuario(validaUsuario, cusu,errors);
+        return new ControlUsuario(vusu, cusu,errors);
     }
     
     public ControlHorario createControlHorario(){
-        ValidaHorario vhor = new ValidaHorario();
+        Validar vhor = new Validar();
         ControlPersisHorario chor = new ControlPersisHorario();
         Errors errors = Errors.getInstance();        
         return new ControlHorario(vhor,chor,errors);
     }
     
     public ControlJuego createControlJuego(){
-        ValidaJuego vjue = new ValidaJuego();
+        Validar vjue = new Validar();
         ControlPersisJuego cjue = new ControlPersisJuego();
         Errors errors = Errors.getInstance();
         return new ControlJuego(vjue,cjue,errors);
     }
     
     public ControlCliente createControlCliente(){
-        ValidaCliente vcli = new ValidaCliente();
+        Validar vcli = new Validar();
         ControlPersisCliente ccli = new ControlPersisCliente();
         Errors errors = Errors.getInstance();
         return new ControlCliente(vcli,ccli,errors);
     }
     
     public ControlEmpleado createControlEmpleado(){
-        ValidaEmpleado vemp = new ValidaEmpleado();
+        Validar vemp = new Validar();
         ControlPersisEmpleado cemp = new ControlPersisEmpleado();
         Errors errors = Errors.getInstance();
         return new ControlEmpleado(vemp,cemp,errors);

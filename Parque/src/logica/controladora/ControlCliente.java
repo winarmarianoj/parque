@@ -3,19 +3,17 @@ package logica.controladora;
 import java.util.List;
 import logger.Errors;
 import logica.Cliente;
-import logica.Juego;
 import logica.excepciones.ClienteException;
-import logica.excepciones.JuegoException;
-import logica.validador.ValidaCliente;
+import logica.validador.Validar;
 import persistencia.ControlPersisCliente;
 
 public class ControlCliente {
     
     private final ControlPersisCliente ccli;
-    private final ValidaCliente vcli;
+    private final Validar vcli;
     private final Errors errors;
 
-    public ControlCliente(ValidaCliente vcli, ControlPersisCliente ccli, Errors errors) {
+    public ControlCliente(Validar vcli, ControlPersisCliente ccli, Errors errors) {
         this.ccli = ccli;
         this.vcli = vcli;
         this.errors = errors;
@@ -25,9 +23,11 @@ public class ControlCliente {
     public boolean creaCliente(Cliente cli) {
         boolean res = false;        
         try{
-            if(vcli.validaCliente(cli)){
-            res = ccli.createCliente(cli);
-            }
+            if(!searchCliente(cli)){
+                if(vcli.validaCliente(cli)){
+                    res = ccli.createCliente(cli);
+                }
+            }            
         } catch(ClienteException e){
             errors.logError(e.getMessage());
         }         
@@ -53,4 +53,16 @@ public class ControlCliente {
     public Cliente traerClienteEnParticular(int id) {
         return ccli.traerUnCliente(id);
     }    
+    
+    private boolean searchCliente(Cliente cli){
+        boolean res = false;
+        List<Cliente> listCliente = traerCliente();
+        for(Cliente element : listCliente){
+            if(element.getDni().equals(cli.getDni())){
+                res = true;
+                break;
+            }
+        }
+        return res;
+    }
 }

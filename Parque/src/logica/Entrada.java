@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Entrada implements Serializable {
@@ -18,8 +20,8 @@ public class Entrada implements Serializable {
    @GeneratedValue (strategy=GenerationType.SEQUENCE)
    int entrada_id;
    
-   @Basic
-   String fecha;
+   @Temporal(TemporalType.DATE)
+   Date fecha;
    
    @OneToOne
    Cliente cliente;
@@ -33,15 +35,13 @@ public class Entrada implements Serializable {
     public Entrada() {
     }
 
-    public Entrada(int entrada_id, String fecha, Cliente cliente, Empleado empleado, Juego juego) {
+    public Entrada(int entrada_id, Date fecha, Cliente cliente, Empleado empleado, Juego juego) {
         this.entrada_id = entrada_id;
         this.fecha = fecha;
         this.cliente = cliente;
         this.empleado = empleado;
         this.juego = juego;
     }
-
-    
 
     public int getEntrada_id() {
         return entrada_id;
@@ -51,13 +51,15 @@ public class Entrada implements Serializable {
         this.entrada_id = entrada_id;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
-    }    
+    }
+
+   
 
     public Cliente getCliente() {
         return cliente;

@@ -1,35 +1,33 @@
 package logica.controladora;
 
-import java.io.IOException;
 import logica.Usuario;
 import persistencia.ControlaPersisUsuario;
-import java.lang.System.Logger;
-import java.lang.System.Logger.Level;
 import java.util.List;
 import logger.Errors;
 import logica.excepciones.UsuarioException;
-import logica.validador.ValidaUsuario;
+import logica.validador.Validar;
 
 public class ControlUsuario {
     
     private final ControlaPersisUsuario cusu;
-    private final ValidaUsuario validusu;
+    private final Validar validusu;
     private final Errors errors;
     
-    public ControlUsuario(ValidaUsuario validaUsuario, ControlaPersisUsuario cusu, Errors errors) {
+    public ControlUsuario(Validar validaUsuario, ControlaPersisUsuario cusu, Errors errors) {
         this.cusu = cusu;
         this.validusu = validaUsuario;
         this.errors = errors;
-    }
-    
+    }    
     
     //Crea Usuario
     public boolean creaUsuario(Usuario usu) throws UsuarioException{
         boolean res = false;        
         try{
-            if(validusu.validUser(usu)){
-                res = cusu.createUsuario(usu);
-            }
+            if(!searchUsuario(usu)){
+                if(validusu.validUser(usu)){
+                    res = cusu.createUsuario(usu);
+                }
+            }            
         } catch(UsuarioException e){
             errors.logError(e.getMessage());
         }         
@@ -56,7 +54,17 @@ public class ControlUsuario {
         return cusu.traerUnUsuario(id);
     }
     
-    
+    private boolean searchUsuario(Usuario usu){
+        boolean res = false;
+        List<Usuario> listUsu = traerUsuario();
+        for(Usuario element : listUsu){
+            if(element.getNombre().equals(usu.getNombre())){
+                res = true;
+                break;
+            }
+        }
+        return res;
+    }
 
 
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package persistencia.JPA;
 
 import logica.Entrada;
@@ -18,10 +13,6 @@ import javax.persistence.TemporalType;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-/**
- *
- * @author mariano
- */
 public class EntradaJpaController implements Serializable {
 
     public EntradaJpaController(EntityManagerFactory emf) {

@@ -1,11 +1,11 @@
 
 package service;
 
-import logica.controladora.AcontrolManager;
+import logica.controladora.ManagerControl;
 
 public class service {
     
-    AcontrolManager manager = new AcontrolManager();
+    ManagerControl manager = new ManagerControl();
     
     
 }

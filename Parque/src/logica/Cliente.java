@@ -18,19 +18,21 @@ public class Cliente implements Serializable{
     @Basic
     String nombre;
     String apellido;
+    String dni;
     String telefono;
     String mail;
 
     public Cliente() {
     }
 
-    public Cliente(int cliente_id, String nombre, String apellido, String telefono, String mail) {
+    public Cliente(int cliente_id, String nombre, String apellido, String dni, String telefono, String mail) {
         this.cliente_id = cliente_id;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.dni = dni;
         this.telefono = telefono;
         this.mail = mail;
-    }    
+    }   
 
     public int getCliente_id() {
         return cliente_id;
@@ -54,6 +56,14 @@ public class Cliente implements Serializable{
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public String getTelefono() {

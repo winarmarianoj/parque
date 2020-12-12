@@ -3,20 +3,17 @@ package logica.controladora;
 import java.util.List;
 import logger.Errors;
 import logica.Empleado;
-import logica.Usuario;
 import logica.excepciones.EmpleadoException;
-import logica.excepciones.UsuarioException;
-import logica.validador.ValidaEmpleado;
+import logica.validador.Validar;
 import persistencia.ControlPersisEmpleado;
-import persistencia.JPA.EmpleadoJpaController;
 
 public class ControlEmpleado {
     
     private final ControlPersisEmpleado cemp;
-    private final ValidaEmpleado vemp;
+    private final Validar vemp;
     private final Errors errors;
 
-    public ControlEmpleado(ValidaEmpleado vemp, ControlPersisEmpleado cemp, Errors errors) {
+    public ControlEmpleado(Validar vemp, ControlPersisEmpleado cemp, Errors errors) {
         this.cemp = cemp;
         this.vemp = vemp;
         this.errors = errors;
@@ -26,9 +23,11 @@ public class ControlEmpleado {
     public boolean creaEmpleado(Empleado emp){
         boolean res = false;        
         try{
-            if(vemp.validaEmpleado(emp)){
-            res = cemp.createEmpleado(emp);
-            }
+            if(!searchEmpleado(emp)){
+                if(vemp.validaEmpleado(emp)){
+                    res = cemp.createEmpleado(emp);
+                }
+            }            
         } catch(EmpleadoException e){
             errors.logError(e.getMessage());
         }         
@@ -54,5 +53,17 @@ public class ControlEmpleado {
     public Empleado traerEmpleadoEnParticular(int id) {
         return cemp.traerUnEmpleado(id);
     }   
+    
+    private boolean searchEmpleado(Empleado emp){
+        boolean res = false;
+        List<Empleado> listEmpleado = traerEmpleado();
+        for(Empleado element : listEmpleado){
+            if(element.getNombre().equals(emp.getNombre())){
+                res = true;
+                break;
+            }
+        }
+        return res;
+    }
     
 }

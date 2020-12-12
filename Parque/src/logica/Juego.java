@@ -29,9 +29,12 @@ public class Juego implements Serializable {
     public Juego() {
     }
 
-    public Juego(int juego_id, String nombre, List<Empleado> listaEmpleado) {
+    public Juego(int juego_id, String nombre, String edadMinima, String capacidad, String categoria, List<Empleado> listaEmpleado) {
         this.juego_id = juego_id;
         this.nombre = nombre;
+        this.edadMinima = edadMinima;
+        this.capacidad = capacidad;
+        this.categoria = categoria;
         this.listaEmpleado = listaEmpleado;
     }
 
@@ -51,6 +54,30 @@ public class Juego implements Serializable {
         this.nombre = nombre;
     }
 
+    public String getEdadMinima() {
+        return edadMinima;
+    }
+
+    public void setEdadMinima(String edadMinima) {
+        this.edadMinima = edadMinima;
+    }
+
+    public String getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(String capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
     public List<Empleado> getListaEmpleado() {
         return listaEmpleado;
     }
@@ -58,6 +85,8 @@ public class Juego implements Serializable {
     public void setListaEmpleado(List<Empleado> listaEmpleado) {
         this.listaEmpleado = listaEmpleado;
     }
+
+    
 
     
     

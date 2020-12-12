@@ -1,6 +1,7 @@
 package logica;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -8,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Horario implements Serializable {
@@ -31,7 +34,7 @@ public class Horario implements Serializable {
         this.hora_inicio = hora_inicio;
         this.hora_fin = hora_fin;
         this.listaJuegos = listaJuegos;
-    }
+    }    
 
     public int getHorario_id() {
         return horario_id;
@@ -55,7 +58,7 @@ public class Horario implements Serializable {
 
     public void setHora_fin(String hora_fin) {
         this.hora_fin = hora_fin;
-    }
+    }    
 
     public List<Juego> getListaJuegos() {
         return listaJuegos;

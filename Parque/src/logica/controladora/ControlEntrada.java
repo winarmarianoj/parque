@@ -3,9 +3,7 @@ package logica.controladora;
 import java.util.List;
 import logger.Errors;
 import logica.Entrada;
-import logica.Juego;
 import logica.excepciones.EntradaException;
-import logica.excepciones.JuegoException;
 import logica.validador.ValidaEntrada;
 import persistencia.ControlPersisEntrada;
 
@@ -22,7 +20,7 @@ public class ControlEntrada {
     }
     
     //Crea Entrada
-    public boolean creaEntrada(Entrada ent){
+    public boolean creaEntrada(Entrada ent){        
         boolean res = false;        
         try{
             if(vent.validaEntrada(ent)){

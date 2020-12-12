@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import logica.controladora.ManagerControl;
 import logica.controladora.ControlCliente;
 import logica.controladora.ControlEmpleado;
 import logica.controladora.ControlEntrada;
@@ -18,8 +19,8 @@ import logica.factory.ControladoraFactory;
 
 public class Parque {
    
-    public static void main(String[] args) throws UsuarioException, JuegoException {
-        
+    public static void main(String[] args) throws UsuarioException, JuegoException {  
+                       
         /*
         ControladoraFactory factory = new ControladoraFactory();
         

@@ -4,6 +4,7 @@ function formEmtradas(btnEntrada) {
     var inputCheck = {
         nameClient : document.getElementById('nameClient').value,
         lastNameClient : document.getElementById('lastNameClient').value,
+        dni : document.getElementById('dniClient').value,
         phoneClient : document.getElementById('phoneClient').value,        
         emailClient : document.getElementById('emailClient').value,
         idGame : document.getElementById('idGame').value,
@@ -14,6 +15,8 @@ function formEmtradas(btnEntrada) {
     resInputCheck &= op.isNameCorrect(inputCheck.nameClient, "El Nombre del Cliente");
     resInputCheck &= op.isNotNullEmpty(inputCheck.lastNameClient, "El Apellido del Cliente");
     resInputCheck &= op.isNameCorrect(inputCheck.lastNameClient, "El Apellido del Cliente");
+    resInputCheck &= op.isNotNullEmpty(inputCheck.dni, "El DNI del Cliente");
+    resInputCheck &= op.isNameCorrect(inputCheck.dni, "El DNI del Cliente");
     resInputCheck &= op.isNotNullEmpty(inputCheck.phoneClient, "El Telefono del Cliente");
     resInputCheck &= op.isNumber(inputCheck.phoneClient, "El Telefono del Cliente");
     resInputCheck &= op.isNotNullEmpty(inputCheck.emailClient, "El Mail del Cliente");
@@ -27,6 +30,7 @@ function formEmtradas(btnEntrada) {
 
     document.getElementById('nameClient').value = " ";
     document.getElementById('lastNameClient').value = " ";
+    document.getElementById('dniClient').value = " ";
     document.getElementById('phoneClient').value = " ";     
     document.getElementById('emailClient').value = " ";
     document.getElementById('idGame').value = " ";

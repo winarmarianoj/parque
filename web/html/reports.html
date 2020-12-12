@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Game Park</title>
+  <title>Game Park</title>
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -13,15 +13,12 @@
     <!-- Material Kit CSS -->
     <link href="../css/stylesCentral.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../css/styles.css">
-    <!-- API TIEMPO-->
-    <script type="text/javascript" src="https://rss2json.com/gfapi.js"></script>
 </head>
 
-<body>
-
+<body class="">
   <div class="wrapper ">
-
-    <header>
+    
+      <header>
 
         <!--INICIA MENU LATERAL IZQUIERDO-->
         <div class="sidebar" data-color="purple" data-background-color="white">
@@ -38,13 +35,13 @@
               <!--INICIO OPCIONES-->
               <ul class="nav">
 
-                  <li class="nav-item active  ">
+                  <li class="nav-item ">
                       <a class="nav-link" href="dashboard.html">
                         <i class="material-icons">dashboard</i>
                         <p>Tablero</p>
                       </a>
                   </li>                  
-                  <li class="nav-item ">
+                  <li class="nav-item active">
                       <a class="nav-link" href="reports.html">
                         <i class="material-icons">content_paste</i>
                         <p>Informes</p>
@@ -122,57 +119,81 @@
               </div>
             </nav>
             <!--FIN MENU SUPERIOR-->
-          
-          <!--INICIA CUERPO PRINCIPAL DEL HTML-->
+
+
+          <!--INICIA SECCION DE INFORMES Y TABLAS -->
           <div class="content">
-            <div class="container-fluid dash">
+            <div class="container-fluid">
               <div class="row">
+
+                <!--INICIO DE BOTONES -->
+                <button id="gameList" type="button" class="btn btn-outline-primary">Lista de Juegos</button>
+                <button id="hoursList" type="button" class="btn btn-outline-secondary">Lista de Horarios</button>
+                <button id="employeeList" type="button" class="btn btn-outline-success">Lista de Empleados</button>
+                <button id="clientList" type="button" class="btn btn-outline-danger">Lista de Clientes</button>
+                <button id="amountInputByDay" type="button" class="btn btn-outline-warning">Cantidad de Entradas en un Día</button>
+                <button id="amountInputByDayGameEmployee" type="button" class="btn btn-outline-info">Cant Entradas-Empleado-Juego-Dia</button>
+                <button id="employeeListByGame" type="button" class="btn btn-outline-light">Empleados por un Juego</button>
+                <button type="button" class="btn btn-outline-dark">Dark</button>
+                <!--FIN DE BOTONES -->
                 
-                  <section class="columna1 col-6 offset-fixed f-left">
-                    
-                  </section>  
 
-                  <section class="columna2 col-6 offset-fixed f-right">
-                      <!--EL CLIMA -->
-                      <div class="card col-4 f-right clima">
-                          <!-- tutiempo.net - Ancho:350px - Alto:411px -->
-                          <iframe src="https://www.tutiempo.net/s-widget/app/?LocId=42833&sc=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:310px; height:411px;" allowtransparency="true"></iframe>
+
+                <!--INICIO DE LA TABLAS E INFORMES -->
+                <div class="col-md-12">
+                  <div class="card card-plain">
+
+
+                    <div class="card-header card-header-primary">
+                      <h4 class="card-title mt-0"> Table on Plain Background</h4>
+                      <p class="card-category"> Here is a subtitle for this table</p>
+                    </div>
+
+
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table table-hover" id="reportTable">
+                          
+                        </table>
                       </div>
-                      <!--FIN DEL CLIMA-->                      
+                    </div>
 
-                      <!--NOTICIAS EN GENERAL-->
-                      <div id="noticias"></div> 
-                    
-                  </section>
-              </div>    
 
+                  </div>
+                </div>
+                <!--FIN DE LA TABLAS E INFORMES -->
+
+
+                <!--INICIA FOOTER-->
+                <footer class="footer">
+                  <div class="container-fluid">          
+                    <div class="copyright float-right">
+                      &copy;
+                      <script>
+                        document.write(new Date().getFullYear())
+                      </script>, made with <i class="material-icons">favorite</i> by
+                      <a href="https://cv.winarmarianoj.vercel.app/" target="_blank">Mariano Wiñar</a> for a better web.
+                    </div>          
+                  </div>
+                </footer>
+                <!--FIN DEL FOOTER-->
+
+
+              </div>
             </div>
           </div>
-          <!--FIN CUERPO PRINCIPAL DEL HTML-->
 
-          <!--INICIA FOOTER-->
-          <footer class="footer">
-            <div class="container-fluid">          
-              <div class="copyright float-right">
-                &copy;
-                <script>
-                  document.write(new Date().getFullYear())
-                </script>, made with <i class="material-icons">favorite</i> by
-                <a href="https://cv.winarmarianoj.vercel.app/" target="_blank">Mariano Wiñar</a> for a better web.
-              </div>          
-            </div>
-          </footer>
-          <!--FIN DEL FOOTER-->
+
+
 
       </div>
-      <!--FIN PANEL DERECHO COMPLETO-->
+      <!--FINAL PANEL DERECHO COMPLETO-->    
 
-  </div>
-  <!--FIN DEL CUERPO COMPLETO-->
-
-    <script src="../js/security.js"></script>
-    <script src="../js/news.js"></script>
+    <!--<script src="../js/security.js"></script> -->    
     <script src="../js/colorEfects.js"></script>
+    <script src="../js/reports.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/uiMessages.js"></script>
     <script src="../js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="../js/requeridos/popper.min.js"></script>
     <script src="../js/requeridos/bootstrap.min.js"></script>

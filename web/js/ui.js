@@ -1,107 +1,92 @@
 class UI {
-    // Funcion que inserta la Foto mas Nombre y Apellido en index.html
-    addProfile(dataLogin){       
-        var names = dataLogin.name + " " + dataLogin.lastname;
-        const profileList = document.getElementById('profileUser');
-        const elementProfile = document.createElement('div');
-        elementProfile.innerHTML = `
-            <div class="d-flex">
-                <div>                
-                    <img class="rounded-circle" src=${user.profilePicturePath} width="60" height="60" alt="">
-                </div>
-                <div class="ml-3 h7">
-                    <a href="profile.html">${names}</a>
-                </div>
-            </div>                      
-        `;
-        profileList.appendChild(elementProfile);
+    //LISTADO DE JUEGOS
+    drawListGames(element) {
+        var tbody = document.querySelector('#reportTable tbody');
+        tbody.innerHTML = '';
+        var row = tbody.insertRow(i),           
+            idCell = row.insertCell(0),
+            nombreCell = row.insertCell(1),
+            edadMinimaCell = row.insertCell(2),
+            capacidadCell = row.insertCell(3),
+            categoriaCell = row.insertCell(4);
+
+        idCell.innerHTML = element.id;    
+        nombreCell.innerHTML = element.nombre;
+        edadMinimaCell.innerHTML = element.edadMinima;
+        capacidadCell.innerHTML = element.capacidad;
+        categoriaCell.innerHTML = element.categoria;  
+
+        tbody.appendChild(row);
     }
 
-    // Funcion que Actualiza los datos del perfil en profile.html del usuario
-    addPhotoProfileUser(){
+    //LISTADO DE HORARIOS
+    drawListHours(element) {
+        var tbody = document.querySelector('#reportTable tbody');
+        tbody.innerHTML = '';
+        var row = tbody.insertRow(i),           
+            idCell = row.insertCell(0),
+            hora_inicioCell = row.insertCell(1),
+            hora_finCell = row.insertCell(2);
 
-        const ppu = document.getElementById('photoProfileUser');
-        const elementPPU = document.createElement('div');
+        idCell.innerHTML = element.id;    
+        hora_inicioCell.innerHTML = element.hora_inicio;
+        hora_finCell.innerHTML = element.hora_fin;
 
-        elementPPU.innerHTML = `
-            <div class="d-flex">
-                <div>
-                    <img src=${user.profilePicturePath}
-                    width="300" height="300" class="foto row col-lg-10" alt="">
-                </div>
-            </div>
-        `;
-        ppu.appendChild(elementPPU);
+        tbody.appendChild(row);   
     }
 
-    // Funcion que agrega posteos de texto y fotos en el index.html
-    addPostPhotos(post) {
-        const postLists = document.getElementById('publicacionesPost');
-        const postPhoto = document.createElement('div');
+    //LISTADO DE EMPLEADOS
+    drawListEmployee(element) {
+        var tbody = document.querySelector('#reportTable tbody');
+        tbody.innerHTML = '';
+        var row = tbody.insertRow(i),           
+            idCell = row.insertCell(0),
+            nombreCell = row.insertCell(1),
+            apellidoCell = row.insertCell(2);
 
-        var getProfile = JSON.parse(sessionStorage.getItem('user'));
+        idCell.innerHTML = element.id;    
+        nombreCell.innerHTML = element.nombre;
+        apellidoCell.innerHTML = element.apellido;
 
-        var name = getProfile.name + ' ' + getProfile.lastname
-
-        if(post.imagePath === ''){
-            postPhoto.innerHTML = `
-            <div id="${post.postId}" name="postId" class="card my-3">
-                <div class="card userName d-flex justify-content-center">
-                    <p><b>${name}</b></p>
-                </div>               
-                <div class="card my-3 card-body pt-0 pb-2">
-                    ${post.text}
-                </div>
-                <div class="card-footer bg-white border-0 p-0">                                
-                    <div class="d-flex justify-content-between align-items-center my-1">
-                        <div class="col">
-                            <p>Fecha: ${post.date.date.year}:${post.date.date.month}:${post.date.date.day}</p>    
-                        </div>
-                        <div class="col">
-                            <p>Hora: ${post.date.time.hour}:${post.date.time.minute}:${post.date.time.second}</p>    
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-danger" id="btnDelete" name="delete">Delete</a>
-                        </div>
-                    </div>
-                </div>				
-            </div>
-        `;
-        }else{
-            postPhoto.innerHTML = `
-            <div id="${post.postId}" name="postId" class="card my-3">
-                <div class="card userName d-flex justify-content-center">
-                    <p><b>${name}</b></p>
-                </div>
-                <div class="card-img">							
-                    <img src=${post.imagePath} width="800" height="450" alt="">
-                </div>
-                <div class="card my-3 card-body pt-0 pb-2">
-                    ${post.text}
-                </div>
-                <div class="card-footer bg-white border-0 p-0">                                
-                    <div class="d-flex justify-content-between align-items-center my-1">
-                        <div class="col">
-                            <p>Fecha: ${post.date.date.year}:${post.date.date.month}:${post.date.date.day}</p>    
-                        </div>
-                        <div class="col">
-                            <p>Hora: ${post.date.time.hour}:${post.date.time.minute}:${post.date.time.second}</p>    
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-danger" id="btnDelete" name="delete">Delete</a>
-                        </div>
-                    </div>
-                </div>				
-            </div>
-        `;
-        }
-        postLists.appendChild(postPhoto);
+        tbody.appendChild(row);   
     }
 
-    deletePost(element) {
-        if (element.name === "delete") {
-            element.parentElement.parentElement.parentElement.parentElement.remove();
-        }
+    //LISTADO DE CLIENTES
+    drawListClient(element) {
+        var tbody = document.querySelector('#reportTable tbody');
+        tbody.innerHTML = '';
+        var row = tbody.insertRow(i),           
+            idCell = row.insertCell(0),
+            nombreCell = row.insertCell(1),
+            apellidoCell = row.insertCell(2),
+            dniCell = row.insertCell(3),
+            telefonoCell = row.insertCell(4),
+            mailCell = row.insertCell(5);
+
+        idCell.innerHTML = element.id;    
+        nombreCell.innerHTML = element.nombre;
+        apellidoCell.innerHTML = element.apellido;
+        dniCell.innerHTML = element.dni;
+        telefonoCell.innerHTML = element.telefono;  
+        mailCell.innerHTML = element.mail;  
+
+        tbody.appendChild(row);
+    }
+
+    //LISTADO DE EMPLEADOS ENCARGADOS DE UN MISMO JUEGO
+    drawListEmployeeByGame(query3){
+        var tbody = document.querySelector('#reportTable tbody');
+        tbody.innerHTML = '';
+        var row = tbody.insertRow(i),           
+            idCell = row.insertCell(0),
+            nombreCell = row.insertCell(1),
+            apellidoCell = row.insertCell(2);
+
+        idCell.innerHTML = element.id;    
+        nombreCell.innerHTML = element.nombre;
+        apellidoCell.innerHTML = element.apellido;
+
+        tbody.appendChild(row);   
     }
 
 }

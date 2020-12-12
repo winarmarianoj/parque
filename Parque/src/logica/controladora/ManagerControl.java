@@ -2,7 +2,7 @@ package logica.controladora;
 
 import logica.factory.ControladoraFactory;
 
-public class AcontrolManager {
+public class ManagerControl {
     
     private final ControlCliente ccli;
     private final ControlEmpleado cemp;
@@ -11,7 +11,7 @@ public class AcontrolManager {
     private final ControlJuego cjue;
     private final ControlUsuario cusu;
     
-    public AcontrolManager(){
+    public ManagerControl(){
         ControladoraFactory factory = new ControladoraFactory();
         this.ccli = factory.createControlCliente();
         this.cemp = factory.createControlEmpleado();
@@ -19,6 +19,30 @@ public class AcontrolManager {
         this.chor = factory.createControlHorario();
         this.cjue = factory.createControlJuego();
         this.cusu = factory.createControlUsuario();
+    }
+
+    public ControlCliente getCcli() {
+        return ccli;
+    }
+
+    public ControlEmpleado getCemp() {
+        return cemp;
+    }
+
+    public ControlEntrada getCent() {
+        return cent;
+    }
+
+    public ControlHorario getChor() {
+        return chor;
+    }
+
+    public ControlJuego getCjue() {
+        return cjue;
+    }
+
+    public ControlUsuario getCusu() {
+        return cusu;
     }
     
     
