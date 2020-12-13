@@ -66,5 +66,21 @@ public class ControlUsuario {
         return res;
     }
 
-
+    public boolean logIn(Usuario usu){
+        boolean hasLogged = false;
+        if(!usu.isConectado()){
+            usu.setConectado(true);            
+            hasLogged = modifUsuario(usu);
+        }
+        return hasLogged;
+    }
+    
+    public boolean logOut(Usuario usu){
+        boolean hasLogged = false;
+        if(usu.isConectado()){
+            usu.setConectado(false);
+            hasLogged = modifUsuario(usu);
+        }
+        return hasLogged;
+    }
 }

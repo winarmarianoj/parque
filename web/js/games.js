@@ -25,12 +25,12 @@ function formJuegos(btnJuegoHorario) {
 
     if (resGameCheck){sendingGameHours(JSON.stringify(gameCheck));}
 
-    document.getElementById('horaInicio').value = " ";
-    document.getElementById('horaFin').value = " ";
-    document.getElementById('gameName').value = " ";   
-    document.getElementById('edadMinima').value = " ";
-    document.getElementById('capacidadPersonas').value = " ";
-    document.getElementById('categoria').value = " ";
+    horaInicio.value = "";
+    horaFin.value = "";
+    gameName.value = "";   
+    edadMinima.value = "";
+    capacidadPersonas.value = "";
+    categoria.value = "";
 }
 
 function sendingGameHours(datasss) {    

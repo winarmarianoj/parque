@@ -34,7 +34,7 @@
 
                 <!--INICIO OPCIONES-->
                 <ul class="nav">
-                    <li class="nav-item ">
+                    <li class="nav-item active">
                         <a class="nav-link" href="dashboard.html">
                           <i class="material-icons">dashboard</i>
                           <p>Noticias en General</p>
@@ -52,18 +52,18 @@
                           <p>Nueva Entrada y Cliente</p>
                         </a>
                     </li> 
-                    <li class="nav-item ">
+                    <li class="nav-item active">
                         <a class="nav-link" href="list.html">
                           <i class="material-icons">list</i>
                           <p>Listados</p>
                         </a>
                     </li> 
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="reports.html">
                           <i class="material-icons">content_paste</i>
                           <p>Informes</p>
                         </a>
-                    </li>       
+                    </li>           
                 </ul>
                 <!--FIN DE OPCIONES-->
 
@@ -99,104 +99,58 @@
         <!--INICIA PANEL DERECHO COMPLETO-->
         <div class="main-panel">
 
-              <!--INICIA MENU SUPERIOR-->
-              <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-                <div class="container-fluid">          
-                  <div class="collapse navbar-collapse justify-content-end">
-                    <ul class="navbar-nav">
-                      <li>
-                        <button class="btn btn-light" id="btnInicio" onclick="formColorsInicio(btnInicio)" data-toggle="tooltip" data-placement="top" title="Más Brillo"><img src="../icons/inicio.png" alt=""></button>
-                      </li>
-                      <li>
-                        <button class="btn btn-dark" id="btnSunrise" onclick="formColorsSunrise(btnSunrise)" data-toggle="tooltip" data-placement="top" title="Más cálido sin Brillo"><img src="../icons/amanecer.png" alt=""></button>
-                      </li>
-                      <li>
-                        <button class="btn btn-dark" id="btnDays" onclick="formColorsDay(btnDays)" data-toggle="tooltip" data-placement="top" title="Un Gris tranquilo"><img src="../icons/dom.png" alt=""></button>
-                      </li>
-                      <li>
-                        <button class="btn btn-dark" id="btnNight" onclick="formColorsNight(btnNight)" data-toggle="tooltip" data-placement="top" title="Estilo Noche"><img src="../icons/luna.png" alt=""></button>
-                      </li>
-                      <li>
-                        <button class="btn btn-dark" id="btnLogout" onclick="formLogout(btnLogout)" data-toggle="tooltip" data-placement="top" title="Logout"><img src="../icons/logout.png" alt=""></button>
-                      </li>  
-                    </ul>
-                  </div>
+            <!--INICIA MENU SUPERIOR-->
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+              <div class="container-fluid">          
+                <div class="collapse navbar-collapse justify-content-end">
+                  <ul class="navbar-nav">
+                    <li>
+                      <button class="btn btn-light" id="btnInicio" onclick="formColorsInicio(btnInicio)" data-toggle="tooltip" data-placement="top" title="Más Brillo"><img src="../icons/inicio.png" alt=""></button>
+                    </li>
+                    <li>
+                      <button class="btn btn-dark" id="btnSunrise" onclick="formColorsSunrise(btnSunrise)" data-toggle="tooltip" data-placement="top" title="Más cálido sin Brillo"><img src="../icons/amanecer.png" alt=""></button>
+                    </li>
+                    <li>
+                      <button class="btn btn-dark" id="btnDays" onclick="formColorsDay(btnDays)" data-toggle="tooltip" data-placement="top" title="Un Gris tranquilo"><img src="../icons/dom.png" alt=""></button>
+                    </li>
+                    <li>
+                      <button class="btn btn-dark" id="btnNight" onclick="formColorsNight(btnNight)" data-toggle="tooltip" data-placement="top" title="Estilo Noche"><img src="../icons/luna.png" alt=""></button>
+                    </li>
+                    <li>
+                      <button class="btn btn-dark" id="btnLogout" onclick="formLogout(btnLogout)" data-toggle="tooltip" data-placement="top" title="Logout"><img src="../icons/logout.png" alt=""></button>
+                    </li>  
+                  </ul>
                 </div>
-              </nav>
-              <!--FIN MENU SUPERIOR-->
-
+              </div>
+            </nav>
+            <!--FIN MENU SUPERIOR-->
 
             <!--INICIA SECCION DE INFORMES Y TABLAS -->
             <div class="content">
               <div class="container-fluid">
                 <div class="row">
 
-                  <!--INICIO DE BOTONES -->                
-                  <button id="amountInputByDay" type="button" class="btn btn-outline-warning">Cantidad de Entradas en un Día</button>
-                  <button id="amountInputByDayGameEmployee" type="button" class="btn btn-outline-info">Cant Entradas-Empleado-Juego-Dia</button>
-                  <button id="employeeListByGame" type="button" class="btn btn-outline-primary">Empleados por un Juego</button>
-                  <!--FIN DE BOTONES -->   
+                  <!--INICIO DE BOTONES -->
+                  <button id="gameList" type="button" class="btn btn-outline-primary">Lista de Juegos</button>
+                  <button id="hoursList" type="button" class="btn btn-outline-secondary">Lista de Horarios</button>
+                  <button id="employeeList" type="button" class="btn btn-outline-success">Lista de Empleados</button>
+                  <button id="clientList" type="button" class="btn btn-outline-danger">Lista de Clientes</button>                
+                  <!--FIN DE BOTONES -->
 
                   <!--INICIO DE LA TABLAS E INFORMES -->
                   <div class="col-md-12">
                     <div class="card card-plain">
 
-                      <!-- INICIO SOLICITUD DE DATOS -->
-                        <div class="card my-3 col-lg-12">
-
-                            <!--Inicia Cabezera del Formulario-->
-                            <div class="card-header pb-4">
-                                <ul class="nav nav-tabs card-header-tabs nav-fill">
-                                    <li class="nav-item">
-                                        <a id="titleRealizaPublicaciones" class="nav-link active" href="#">Ingreso de Datos a Solicitar según Queries</a>
-                                    </li>                                    
-                                </ul>
-                            </div>
-                            <!--Fin Cabezera del Formulario-->
-                            
-                            <!--INICIA AREA DE MAS DATOS REQUERIDOS PARA EL QUERY -->
-                            <ul>
-                              <p><b>ÁREA DE INGRESO DE DATOS NECESARIOS PARA GENERAR LOS INFORMES</b></p>
-                              <li>
-                                <label id="labels">Nombre del Juego a Requerir información</label>
-                                <input type="text" class="form-control" id="gameName" placeholder="" value="" required>
-                                <div class="invalid-feedback">
-                                        En el caso que necesite ingresar el nombre del juego, Ejemplo Query N° 2.
-                                </div>
-                              </li>
-                              <li>
-                                <label id="labels">Fecha a Requerir información</label>
-                                <input type="text" class="form-control" id="anio" placeholder="" value="" required>
-                                <p>Ingrese el Año válido</p>
-                                <input type="text" class="form-control" id="mes" placeholder="" value="" required>
-                                <p>Ingrese el Mes válido</p>
-                                <input type="text" class="form-control" id="dia" placeholder="" value="" required>
-                                <p>Ingrese el Día válido</p>                                
-                              </li>
-                            </ul> 
-                            <!--FIN AREA DE MAS DATOS REQUERIDOS PARA EL QUERY -->
-
-                        </div>
-                        <!-- FIN SOLICITUD DE DATOS -->
-
-                      <!--INICIO AREA DE PUBLICACIONES -->
                       <div class="card-header card-header-primary">
-                        <h4 class="card-title mt-0"> Informes y Queries</h4>
+                        <h4 class="card-title mt-0"> Listados de Juegos / Horarios / Empleados / Clientes</h4>
                         <p class="card-category"> Sólo presione el Botón sobre la opción que este necesitando.</p>
                       </div>
 
                       <div class="card-body">
                         <div class="table-responsive">
-                          <table class="table table-hover" id="queryTable"></table>
+                          <table class="table table-hover" id="reportTable"></table>
                         </div>
                       </div>
-
-                      <div class="card-body">
-                        <div class="table-responsive">
-                          <div id="queries"></div>
-                        </div>
-                      </div>
-                      <!--FIN AREA DE PUBLICACIONES -->
 
                     </div>
                   </div>
@@ -206,7 +160,7 @@
                   <!--INICIA FOOTER-->
                   <footer class="firma">
                     <div class="container-fluid">          
-                      <div class="copyright">
+                      <div class="copyright float-right">
                         &copy;
                         <script>
                           document.write(new Date().getFullYear())
@@ -224,13 +178,13 @@
 
         </div>
         <!--FINAL PANEL DERECHO COMPLETO--> 
-
-    </div>
-    <!--FINAL WRAPPER-->    
+        
+    </div>  
+    <!--FINAL WRAPPER--> 
 
     <!--<script src="../js/security.js"></script> -->    
     <script src="../js/colorEfects.js"></script>
-    <script src="../js/reports.js"></script>
+    <script src="../js/list.js"></script>
     <script src="../js/ui.js"></script>
     <script src="../js/uiFunctions.js"></script>
     <script src="../js/uiMessages.js"></script>

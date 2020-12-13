@@ -82,6 +82,15 @@ class UIFunctions {
 	    return resNumber;
 	}	
 
+	// Funcion que revisa toda la fecha por cada campo y condición
+	isFecha(checkin){
+	    let resulFecha = true;
+	    if(checkin.year<1915 || checkin.year>2020){setTimeout(msg.invalidYear('Debes ingresar un año válido. Gracias.'),2000);resulFecha=false;}
+	    if(checkin.month<=0 || checkin.month>12){setTimeout(msg.invalidMonth('Debes ingresar un mes válido. Son del 1 al 12'),2000);resulFecha=false;}
+	    if(checkin.day<=0 || checkin.day>31){setTimeout(msg.invalidDay('Debes ingresar un día válido. Son del 1 al 31.'),2000);resulFecha=false;}
+	    return resulFecha;
+	}
+
 	// Funcion que agrega errores a la lista de errores
 	saveErrorsList(text){
 		errorsList.push(text)

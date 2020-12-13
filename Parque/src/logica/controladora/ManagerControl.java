@@ -1,5 +1,9 @@
 package logica.controladora;
 
+import logger.Errors;
+import logica.Empleado;
+import logica.Usuario;
+import logica.excepciones.UsuarioException;
 import logica.factory.ControladoraFactory;
 
 public class ManagerControl {
@@ -10,6 +14,7 @@ public class ManagerControl {
     private final ControlHorario chor;
     private final ControlJuego cjue;
     private final ControlUsuario cusu;
+    private final Errors errors;
     
     public ManagerControl(){
         ControladoraFactory factory = new ControladoraFactory();
@@ -19,8 +24,18 @@ public class ManagerControl {
         this.chor = factory.createControlHorario();
         this.cjue = factory.createControlJuego();
         this.cusu = factory.createControlUsuario();
+        this.errors = Errors.getInstance();
+    }
+    
+    public boolean logIn(Usuario usu){
+        return cusu.logIn(usu);
     }
 
+    public boolean logOut(Usuario usu){
+        return cusu.logOut(usu);
+    }    
+
+    // Getters de todos los Controladores
     public ControlCliente getCcli() {
         return ccli;
     }

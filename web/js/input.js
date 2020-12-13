@@ -28,13 +28,13 @@ function formEmtradas(btnEntrada) {
 
     if (resInputCheck){sendingInputClient(JSON.stringify(inputCheck));}
 
-    document.getElementById('nameClient').value = " ";
-    document.getElementById('lastNameClient').value = " ";
-    document.getElementById('dniClient').value = " ";
-    document.getElementById('phoneClient').value = " ";     
-    document.getElementById('emailClient').value = " ";
-    document.getElementById('idGame').value = " ";
-    document.getElementById('idEmployee').value = " ";
+    nameClient.value = "";
+    lastNameClient.value = "";
+    dniClient.value = "";
+    phoneClient.value = "";     
+    emailClient.value = "";
+    idGame.value = "";
+    idEmployee.value = "";
 }
 
 function sendingInputClient(datassss) {    
