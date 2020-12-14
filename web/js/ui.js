@@ -43,10 +43,14 @@ class UI {
             idCell = row.insertCell(0),
             nombreCell = row.insertCell(1),
             apellidoCell = row.insertCell(2);
+            idUserCell = row.insertCell(3);
+            nameUserCell = row.insertCell(4);
 
         idCell.innerHTML = element.id;    
         nombreCell.innerHTML = element.nombre;
         apellidoCell.innerHTML = element.apellido;
+        idUserCell.innerHTML = element.idUser;
+        nameUserCell.innerHTML = element.nameUser;
 
         tbody.appendChild(row);   
     }
@@ -71,7 +75,27 @@ class UI {
         mailCell.innerHTML = element.mail;  
 
         tbody.appendChild(row);
-    }    
+    } 
+
+    //LISTADO DE ENTRADAS
+    drawListInput(element) {
+        var tbody = document.querySelector('#reportTable tbody');
+        tbody.innerHTML = '';
+        var row = tbody.insertRow(i),           
+            idCell = row.insertCell(0),
+            fechaCell = row.insertCell(1),
+            idCliCell = row.insertCell(2),
+            idEmpCell = row.insertCell(3),
+            idJueCell = row.insertCell(4);
+
+        idCell.innerHTML = element.id;    
+        fechaCell.innerHTML = element.fecha;
+        idCliCell.innerHTML = element.idCli;
+        idEmpCell.innerHTML = element.idEmp;
+        idJueCell.innerHTML = element.idJue;
+
+        tbody.appendChild(row);
+    }   
 
     //INFORME SOBRE EL PRIMER QUERY SOLICITADO EN EL TP
     drawQuery1(query1,anio,mes,dia){

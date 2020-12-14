@@ -2,7 +2,7 @@ let amountInputByDay = document.getElementById('amountInputByDay');
 let amountInputByDayGameEmployee = document.getElementById('amountInputByDayGameEmployee');
 let employeeListByGame = document.getElementById('employeeListByGame');
 
-amountInputByDay.addEventListener('click', async() => {	
+amountInputByDay.addEventListener('click', () => {	
 	let anio = document.getElementById('anio').value;
 	let mes = document.getElementById('mes').value;
 	let dia = document.getElementById('dia').value;
@@ -33,7 +33,7 @@ amountInputByDay.addEventListener('click', async() => {
     });
 })
 
-amountInputByDayGameEmployee.addEventListener('click', async() => {
+amountInputByDayGameEmployee.addEventListener('click', () => {
 	let anio = document.getElementById('anio').value;
 	let mes = document.getElementById('mes').value;
 	let dia = document.getElementById('dia').value;
@@ -67,7 +67,7 @@ amountInputByDayGameEmployee.addEventListener('click', async() => {
     });
 })
 
-employeeListByGame.addEventListener('click', async() => {
+employeeListByGame.addEventListener('click', () => {
 	let nameGame = document.getElementById('gameName').value;
 	let info = JSON.stringify(nameGame);
 	gameName.value = "";

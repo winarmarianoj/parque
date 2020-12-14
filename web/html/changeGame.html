@@ -24,7 +24,7 @@
       <header>
 
           <!--INICIA MENU LATERAL IZQUIERDO-->
-          <div class="sidebar" data-color="green" data-background-color="white">
+          <div class="sidebar" data-color="danger" data-background-color="white">
           <!--
           data-color="purple | azure | green | orange | danger"
           -->
@@ -37,7 +37,7 @@
 
                 <!--INICIO OPCIONES-->
                 <ul class="nav">
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="dashboard.html">
                           <i class="material-icons">dashboard</i>
                           <p>Noticias en General</p>
@@ -73,7 +73,7 @@
                           <p>Cambios Horarios</p>
                         </a>
                     </li> 
-                    <li class="nav-item ">
+                    <li class="nav-item active">
                         <a class="nav-link" href="changeGame.html">
                           <i class="material-icons">build</i>
                           <p>Cambios Juegos</p>
@@ -102,7 +102,7 @@
                           <i class="material-icons">content_paste</i>
                           <p>Informes</p>
                         </a>
-                    </li>                     
+                    </li>                       
                 </ul>
                 <!--FIN DE OPCIONES-->
 
@@ -168,97 +168,97 @@
           <div class="content">
             <div class="container-fluid dash">
               <div class="row">
-                
-                  <section class="columna1 col-8 offset-fixed f-left">                      
-                    <!--INICIO CARROUSEL 1 SECTORES DEL PARQUE-->
-                    <div class="carousel-fotos carousel slide w-100 pb-4" data-ride="carousel">
-                        <p class="titleEvents text-center">SECTORES DE GAME PARK</p> 
-                        <div class="galeria carousel-inner w-100" role="listbox"> 
-                            <div class="carousel-item row no-gutters active">
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href="" ><img src="../img/carrousel/1.jpg" alt=""/></a>Sector 1</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/2.jpg" alt=""/></a>Sector 2</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/3.jpg" alt=""/></a>Sector 3</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/4.jpg" alt=""/></a>Sector 4</div>
-                            </div>
-                            <div class="carousel-item row no-gutters">
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/5.jpg" alt=""/></a>Sector 5</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/6.jpg" alt=""/></a>Sector 6</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/7.jpg" alt=""/></a>Sector 7</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/8.jpg" alt=""/></a>Sector 8</div>
-                            </div>
-                        </div>                        
-                    </div>
-                    <!--FIN CARROUSEL 1 SECTORES DEL PARQUE-->
 
-                    <!--INICIO CARROUSEL 2 SECTORES DEL PARQUE-->
-                    <div class="carousel-fotos2 carousel slide w-100 pb-4" data-ride="carousel">
-                        <p class="titleEvents text-center">SECTORES DE GAME PARK</p> 
-                        <div class="galeria carousel-inner w-100" role="listbox"> 
-                            <div class="carousel-item row no-gutters active">
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href="" ><img src="../img/carrousel/9.jpg" alt=""/></a>Sector 9</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/10.jpg" alt=""/></a>Sector 10</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/11.jpg" alt=""/></a>Sector 11</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/12.jpg" alt=""/></a>Sector 12</div>
+                  <section class="columna1 col-3 offset-fixed f-left">
+                      <div class="col-md-12">
+                        <div class="card card-plain">
+                            <!--INICIO AREA PEDIDO DE DATOS -->
+                            <div class=""> <!--card-header card-header-primary-->
+                              <h4 class="card-category mt-0"><b>Ingrese el Id del Juego que desee Modificar o Eliminar</b></h4>
+                              <p class="card-category"><b>Sólo presione el Botón sobre la opción que este necesitando.</b></p>
+                              <div class="col">                          
+                                  <label id="labels">Id del Juego</label>
+                                  <input type="text"  id="idJuego" placeholder="" value="" required>
+                                  <p class="card-category my-2"><b>En el caso que no lo recuerde, busque el Id en el Listado de Juegos.</b></p>                        
+                              </div>
                             </div>
-                            <div class="carousel-item row no-gutters">
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/13.jpg" alt=""/></a>Sector 13</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/14.jpg" alt=""/></a>Sector 14</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/15.jpg" alt=""/></a>Sector 15</div>
-                                <div id="textPhotosCarousel" class="imagen col-3 float-left text-center"><a titles="" href=""><img src="../img/carrousel/16.jpg" alt=""/></a>Sector 16</div>
-                            </div>
-                        </div>                        
-                    </div>
-                    <!--FIN CARROUSEL 2 SECTORES DEL PARQUE-->
-                  </section>  
-
-                  <section class="columna2 col-4 offset-fixed f-right">
-                      <!--EL CLIMA -->
-                      <p id="titlePubli">CLIMA</p>
-                      <div class="card col-4 f-right clima">
-                          <!-- tutiempo.net - Ancho:350px - Alto:411px -->
-                          <iframe src="https://www.tutiempo.net/s-widget/app/?LocId=42833&sc=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:310px; height:411px;" allowtransparency="true"></iframe>
-                      </div>
-                      <!--FIN DEL CLIMA-->
-                  </section>                  
-              </div>
-              <div class="row">
-                  <section class="columna1 col-6 offset-fixed f-left">
-                      <!--INICIO PUBLICIDADES-->
-                    <div id="publicidades">
-                        <p id="titlePubli">PUBLICIDADES</p>
-                        <div class="" role="listbox" > <!--carousel-inner w-180-->
-                            <div class="galeriaPublicaciones carousel-item row no-gutters active">
-                                <div id="textPhotosPubli" class="imagen col-3 float-left text-center"><a titles="TURISMO" href="" ><img
-                                            src="../img/publicidades/turismo.jpg" widht="120" height="120" alt="TURISMO" /></a>TURISMO</div>                                                             
-                                <div id="textPhotosPubli" class="imagen col-3 float-left text-center"><a titles="INSTITUTO" href="" ><img
-                                            src="../img/publicidades/instituto.jpg" widht="120" height="120" alt="INSTITUTO" /></a>INSTITUTO</div>
-                                <div id="textPhotosPubli" class="imagen col-3 float-left text-center"><a titles="ELECTRO"
-                                        href="" ><img src="../img/publicidades/electro.jpg" widht="120" height="120" alt="ELECTRO" /></a>ELECTRO</div>
-                                <div id="textPhotosPubli" class="imagen col-3 float-left text-center"><a titles="HAMBUR"
-                                        href=""><img src="../img/publicidades/hamburgueza.jpg" widht="120" height="120" alt="HAMBUR" /></a>HAMBUR</div> 
-                            </div>
-                            <div class="galeriaPublicaciones carousel-item row no-gutters active">
-                                <div id="textPhotosPubli" class="imagen col-3 float-left text-center"><a titles="SUPER" href="" ><img
-                                            src="../img/publicidades/super.jpg" widht="120" height="120" alt="SUPER" /></a>SUPER</div>
-                                <div id="textPhotosPubli" class="imagen col-3 float-left text-center"><a titles="PROJECTOR" href="" ><img
-                                            src="../img/publicidades/projector.jpg" widht="120" height="120" alt="PROJECTOR" /></a>PROJECTOR</div>
-                                <div id="textPhotosPubli" class="imagen col-3 float-left text-center"><a titles="ROPA" href="" ><img
-                                            src="../img/publicidades/ropa.jpg" widht="120" height="120" alt="ROPA" /></a>ROPA</div>
-                                <div id="textPhotosPubli" class="imagen col-3 float-left text-center"><a titles="ICE" href="" ><img
-                                            src="../img/publicidades/ice.png" widht="120" height="120" alt="ICE" /></a>ICE</div>
-                            </div>                            
+                            <!--FIN AREA PEDIDO DE DATOS -->
                         </div>
-                    </div>
-                    <!--FIN PUBLICIDADES--> 
+
+                        <!--INICIO DE BOTONES -->                        
+                        <button id="changeJuego" type="button" class="btn btn-primary">Cambiar Datos</button>
+                        <button id="deleteJuego" type="button" class="btn btn-secondary">Eliminar Juego</button>
+                        <!--FIN DE BOTONES -->                        
+                      </div>
                   </section>
 
-                  <section class="columna2 col-6 offset-fixed f-right">
-                      <!--NOTICIAS EN GENERAL-->
-                      <p id="titlePubli">NOTICIAS</p>
-                      <div id="noticias"></div>     
-                  </section>                
-              </div>              
+                  <section class="columna2 col-9 offset-fixed f-right">
+                      <!--INICIO DE LA TABLAS E INFORMES -->
+                      <div class="col-md-12">
+                        <div class="card card-plain"> 
 
+                          <!--INICIA SECCION DEL FORM -->
+                          <div class="content formGames">
+                            <div class="container-fluid">
+                              <div class="row">
+                                <div class="col-md-8">
+                                  <div class="card">
+                                    <div class="card-header card-header-primary">
+                                      <h4 class="card-title">Juego Solicitado</h4>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <!--INICIO DEL FORMULARIO -->  
+                                        <form >                                          
+                                          <div class="row my-4">
+                                            
+                                            <div class="col-md-4">
+                                              <div class="form-group">
+                                                <label class="bmd-label-floating">Nombre del Juego</label>
+                                                <input type="text" class="form-control" id="nombreJuego">
+                                              </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                              <div class="form-group">
+                                                <label class="bmd-label-floating">Edad Minima Admitida</label>
+                                                <input type="text" class="form-control" id="edadMinimaJuego">
+                                              </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                              <div class="form-group">
+                                                <label class="bmd-label-floating">Capacidad de Personas</label>
+                                                <input type="text" class="form-control" id="cantidadPersonas">
+                                              </div>
+                                            </div>                                     
+                                          </div>
+                                          <div class="row my-4">
+                                            <div class="col-md-4">
+                                              <div class="form-group">
+                                                <label class="bmd-label-floating">Categoría del Juego</label>
+                                                <input type="text" class="form-control" id="categoriaJuego">
+                                              </div>
+                                            </div>                                  
+                                          </div>
+                                          
+                                          <button id="btnChangeJuego" type="submit" class="btn btn-primary pull-right my-2" onclick="formChangeJuego(btnChangeJuego)">Enviar</button>
+
+                                        </form>
+                                        <!--FIN DEL FORMULARIO-->
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <!--FIN SECCION DEL FORM -->
+
+                        </div>
+                      </div>
+                      <!--FIN DE LA TABLAS E INFORMES -->
+                  </section>    
+                  
+              </div>
             </div>
           </div>
           <!--FIN CUERPO PRINCIPAL DEL HTML-->
@@ -284,7 +284,7 @@
     <!--FIN DEL WRAPPER-->
 
     <!--<script src="../js/security.js"></script>-->
-    <script src="../js/news.js"></script>
+    <script src="../js/changeHour.js"></script>
     <script src="../js/colorEfects.js"></script>
     <script src="../js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="../js/requeridos/popper.min.js"></script>
