@@ -1,0 +1,25 @@
+ <table class="table table-bordered" id="dataTable" name="tablita" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID Usuario</th>
+                      <th>Usuario</th>
+                      <th>Contraseña</th>
+                     </tr>
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                        <%		
+		Controladora control = (Controladora) misession.getAttribute("control");
+		List<Usuario> listaUsuario = control.getListaUsuarios();
+                    for (Usuario usua : listaUsuario) { 
+                %>
+                      <td><%=usua.getId_usuario()%></td>
+                      <td><%=usua.getUser()%></td>
+                      <td><%=usua.getContrasenia()%></td>
+                      
+                    </tr>
+                                       
+                      <% } %>
+                  </tbody>
+                </table>

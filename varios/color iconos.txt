@@ -1,0 +1,5 @@
+Colores purpura de iconos y demas detalles
+#AA0AA8
+
+Server Port : 8082
+ShutDown Port : 8007

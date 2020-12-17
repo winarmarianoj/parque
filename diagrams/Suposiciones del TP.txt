@@ -1,0 +1,16 @@
+Profesora Tema importante:
+
+En mi caso que tengo el SO Ubuntu de Linux con versión 18.04- Lo comento ya que la versión de Apache Tomcat que pude bajarme del sitio oficial apache-tomcat-8.0.27 no funciona y siempre da problemas.
+Por el cual, al cambiarlo e instalar apache-tomcat-9.0.39 todo funciona correctamente.
+Lo comento ya que Ud. dijo que todos tratemos de tener la misma versión para compatibilidades, pero aquí no me dejó. 
+
+Suposiciones:
+
+1- Suponiendo que todos los juegos estan habilitados para su uso todos los días.
+
+2- Suponiendo que no nos interesa las categorías de los juegos, ni tampoco respecto a las edades a quienes los puedan utilizar.
+
+3- Suponiendo que no hace falta realizar el cambio de turno de los empleados, ya que no podrían estar en el puesto mas de 10 horas seguidas todos los días.
+
+4-Con respecto a las Modificaciones y Eliminaciones de Un Usuario y Empleado, sólo podrá hacerlo sobre su mismo usuario y datos de empleado. No de otra persona.
+

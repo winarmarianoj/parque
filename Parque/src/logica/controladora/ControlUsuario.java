@@ -20,8 +20,9 @@ public class ControlUsuario {
     }    
     
     //Crea Usuario
-    public boolean creaUsuario(Usuario usu) throws UsuarioException{
-        boolean res = false;        
+    public boolean creaUsuario(String name, String pass, boolean conectado) throws UsuarioException{
+        boolean res = false;
+        Usuario usu = new Usuario(name,pass,conectado);
         try{
             if(!searchUsuario(usu)){
                 if(validusu.validUser(usu)){

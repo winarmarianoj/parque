@@ -20,8 +20,8 @@ public class Entrada implements Serializable {
    @GeneratedValue (strategy=GenerationType.SEQUENCE)
    int entrada_id;
    
-   @Temporal(TemporalType.DATE)
-   Date fecha;
+   @Basic
+   String fecha;
    
    @OneToOne
    Cliente cliente;
@@ -35,13 +35,13 @@ public class Entrada implements Serializable {
     public Entrada() {
     }
 
-    public Entrada(int entrada_id, Date fecha, Cliente cliente, Empleado empleado, Juego juego) {
+    public Entrada(int entrada_id, String fecha, Cliente cliente, Empleado empleado, Juego juego) {
         this.entrada_id = entrada_id;
         this.fecha = fecha;
         this.cliente = cliente;
         this.empleado = empleado;
         this.juego = juego;
-    }
+    }    
 
     public int getEntrada_id() {
         return entrada_id;
@@ -51,15 +51,13 @@ public class Entrada implements Serializable {
         this.entrada_id = entrada_id;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
-    }
-
-   
+    }   
 
     public Cliente getCliente() {
         return cliente;

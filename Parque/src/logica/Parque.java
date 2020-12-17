@@ -21,12 +21,13 @@ public class Parque {
    
     public static void main(String[] args) throws UsuarioException, JuegoException {  
                        
-        /*
+       /* 
         ControladoraFactory factory = new ControladoraFactory();
         
         Usuario usu1 = new Usuario();
         usu1.setNombre("ADSFSFSF");
         usu1.setContrasenia("DDDDDDDDDDDDD");
+        usu1.setConectado(false);
         
         
         ControlUsuario cusu = factory.createControlUsuario();
@@ -40,7 +41,8 @@ public class Parque {
         Empleado emp1 = new Empleado();
         emp1.setNombre("AAAAAAA");
         emp1.setApellido("BBBBBBBBBBB");
-        emp1.setUsuario(usu1);        
+        emp1.setUsuario(usu1); 
+        
         
         ControlEmpleado cemp = factory.createControlEmpleado();
         if(cemp.creaEmpleado(emp1)){
@@ -55,6 +57,7 @@ public class Parque {
         cli1.setApellido("FSDFSDFSLoco");
         cli1.setTelefono("11-2322-3333");
         cli1.setMail("algoSS@jjj.com");
+        cli1.setDni("11222333");
         
         
         ControlCliente ccli = factory.createControlCliente();
@@ -68,6 +71,9 @@ public class Parque {
         
         Juego juego1 = new Juego();
         juego1.setNombre("tFSDFSFSFSobogan");
+        juego1.setEdadMinima("2");
+        juego1.setCapacidad("35");
+        juego1.setCategoria("sector1");        
         
         List<Empleado> listEmp = new ArrayList<>();
         listEmp.add(emp1);
@@ -117,7 +123,7 @@ public class Parque {
             System.out.println("NO ENTRADA");
         }
         
-        */
+        
         
         // PRIMER QUERY PEDIDO
         /*

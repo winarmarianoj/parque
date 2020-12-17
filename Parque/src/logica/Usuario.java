@@ -20,12 +20,15 @@ public class Usuario {
 
     public Usuario() {
     }
-
-    public Usuario(int usuario_id, String nombre, String contrasenia, boolean conectado) {
-        this.usuario_id = usuario_id;
+    public Usuario(String nombre, String contraseña, boolean conectado){
         this.nombre = nombre;
         this.contrasenia = contrasenia;
         this.conectado = conectado;
+    }
+
+    public Usuario(int usuario_id, String nombre, String contrasenia, boolean conectado) {
+        this.usuario_id = usuario_id;
+        
     }
     
     public int getUsuario_id() {
