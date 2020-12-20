@@ -1,14 +1,7 @@
-<%-- 
-    Document   : reports
-    Created on : 15 dic. 2020, 19:31:43
-    Author     : mariano
---%>
-
+<%@page import="logica.controladora.ManagerControl"%>
 <%@page import="logica.Juego"%>
-<%@page import="logica.controladora.ControlJuego"%>
 <%@page import="logica.Empleado"%>
 <%@page import="java.util.List"%>
-<%@page import="logica.controladora.ControlEmpleado"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,62 +87,15 @@
                                     <p><b>ÁREA DE INGRESO DE DATOS NECESARIOS PARA GENERAR LOS INFORMES</b></p> 
                                     <li>
                                       <label id="labels">Nombre del Juego a Requerir información</label>
-                                      <input type="text" class="form-control" id="gameName" name="juegoReports" placeholder="" value="" required>                                      
+                                      <input type="text" class="form-control" id="gameName" name="juegoPorEmpleado" placeholder="" value="" required>                                      
                                     </li>                                    
-                                </ul>                                 
+                                </ul>
+                                <input type="submit" value="Pedir la Consultar" " class="btn btn-warning"/>
                             </form>
                             <!--FIN AREA DE MAS DATOS REQUERIDOS PARA EL QUERY -->
 
                         </div>
-                        <!-- FIN SOLICITUD DE DATOS -->
-                        
-                        <!-- IMPRESION DE DATOS SOLICITADOS -->
-                        <div class="row justify-content-center mt-5">
-                            <div class="col-6">
-                                <label class="titleCentral">Resultado obtenido</label>                                
-                            </div>
-                            
-                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-hover" id="reportTable">
-                                        <thead>
-                                            <tr>
-                                              <th>ID Empleado</th>
-                                              <th>Nombre</th>
-                                              <th>Apellido</th>
-                                             </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <tr>
-                                <%		
-                                        ControlJuego control = (ControlJuego) session.getAttribute("resulQ3");
-                                        Juego ju = control.getJue();
-                                        List<Juego> listJue = control.traerJuego();
-                                        List<Empleado> listEmp = null;
-                                        for (Juego jue : listJue) { 
-                                            if(jue.getNombre().equals(ju.getNombre())){
-                                                 listEmp = jue.getListaEmpleado();
-                                            }
-                                        }
-                                        for (Empleado e : listEmp){
-                                        
-                                %>
-                                              <td><%=e.getEmpleado_id()%></td>
-                                              <td><%=e.getNombre()%></td>
-                                              <td><%=e.getApellido()%></td>
-                                            </tr>
-
-                                <%    
-                                        }
-                                %>
-                                        </tbody>
-
-                                    </table>
-                                </div>
-                            </div>
-                            
-                        </div>
+                        <!-- FIN SOLICITUD DE DATOS -->      
 
                         <div class="row justify-content-center mt-5" style="height: auto">
                             <div class="col-6">
@@ -186,12 +132,7 @@
     </div>
     <!--FINAL WRAPPER-->    
 
-    <!--<script src="js/security.js"></script> -->    
     <script src="js/colorEfects.js"></script>
-    <script src="js/reports.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/uiFunctions.js"></script>
-    <script src="js/uiMessages.js"></script>
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="js/requeridos/popper.min.js"></script>
     <script src="js/requeridos/bootstrap.min.js"></script>

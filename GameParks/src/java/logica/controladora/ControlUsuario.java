@@ -70,16 +70,14 @@ public class ControlUsuario {
 
     public boolean logIn(Usuario usu){
         usu.setConectado(true);
+        modifUsuario(usu);
         return true;
     }
     
     public boolean logOut(Usuario usu){
-        boolean hasLogged = false;
-        if(usu.isConectado()){
-            usu.setConectado(false);
-            hasLogged = modifUsuario(usu);
-        }
-        return hasLogged;
+        usu.setConectado(false);
+        modifUsuario(usu);
+        return true;
     }
 
     public Usuario getUsuario() {

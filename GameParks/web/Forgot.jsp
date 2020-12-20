@@ -1,9 +1,3 @@
-<%-- 
-    Document   : forgot
-    Created on : 15 dic. 2020, 19:21:47
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">

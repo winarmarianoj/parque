@@ -1,9 +1,3 @@
-<%-- 
-    Document   : newjsp
-    Created on : 13 dic. 2020, 03:51:20
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">

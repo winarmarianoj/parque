@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Confirmacion
-    Created on : 16 dic. 2020, 19:57:21
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -40,8 +34,7 @@
 				<a href="Login.jsp" class="btn btn-success btn-block">Ir a Inicio de Sesión o Registrarse</a>				
 			</div>			
 		</div>		
-	</div>
-        
+	</div>        
         
         <script src="js/requeridos/jquery-3.3.1.min.js"></script>
         <script src="js/requeridos/popper.min.js"></script>

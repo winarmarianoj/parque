@@ -1,6 +1,7 @@
 package logica;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
@@ -59,13 +60,30 @@ public class Horario implements Serializable {
     public void setHora_fin(String hora_fin) {
         this.hora_fin = hora_fin;
     }    
-
+        
+    // METHODS AND FUNCTION GAME LIST
+    
     public List<Juego> getListaJuegos() {
+        if (listaJuegos == null){listaJuegos = new ArrayList<>();}
         return listaJuegos;
     }
 
-    public void setListaJuegos(List<Juego> listaJuegos) {
-        this.listaJuegos = listaJuegos;
+    public void addJuegos(Juego juegos) {
+        if (listaJuegos == null){listaJuegos = new ArrayList<>();}
+        listaJuegos.add(juegos);
     }  
+    public int listaJuegosSize(){
+        if (listaJuegos == null){listaJuegos = new ArrayList<>();}
+        return listaJuegos.size();
+    }
+    public Juego searchJuego(int index){
+        if (index < 0 || index >= listaJuegosSize()){return null;}
+        return listaJuegos.get(index);
+    }
+    public boolean removeJuegos(int index){
+        if (index < 0 || index >= listaJuegosSize()){return false;}
+        listaJuegos.remove(index);
+        return true;
+    }
     
 }

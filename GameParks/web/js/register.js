@@ -1,3 +1,5 @@
+/* global op, msg */
+
 // funcion que me trae del Register HTML
 function formRegister(btnRegister) {
     var pass2 = document.getElementById('password2').value;

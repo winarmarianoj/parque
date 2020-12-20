@@ -5,6 +5,9 @@
   left: 0;
 }
 
+.posicion{
+    position: absolute;
+}
 .f-left{
     margin-left: 0%;
     left: 0;
@@ -90,4 +93,29 @@ div.imagen img:hover{
   font-size: 2rem;
   color: blueviolet;
   text-align: center;
+}
+.informeQueries{
+  font-family: Arial;
+  font-size: 2rem;
+  color: orange;
+  text-align: center;
+}
+.textP{
+  font-family: Arial;
+  font-size: 15px;
+  color: red;
+  text-align: center;
+}
+
+
+
+table,tr,td,th{
+	border: 1px double black;		
+}
+th{
+	text-align: center;
+	background-color: chocolate;	/*lightsalmon*/
+}
+td{
+	color: blue;
 }

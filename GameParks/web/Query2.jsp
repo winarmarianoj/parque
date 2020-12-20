@@ -1,9 +1,3 @@
-<%-- 
-    Document   : reports
-    Created on : 15 dic. 2020, 19:31:43
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -103,7 +97,8 @@
                                         <input type="text" class="form-control" id="dia" name="dia" placeholder="" value="" required>
                                         <p>Ingrese el Día válido</p>                                
                                     </li>
-                                </ul>                                 
+                                </ul>
+                                <input type="submit" value="Pedir la Consultar" " class="btn btn-warning"/>
                             </form>
                             <!--FIN AREA DE MAS DATOS REQUERIDOS PARA EL QUERY -->
 
@@ -111,14 +106,14 @@
                         <!-- FIN SOLICITUD DE DATOS -->
                         
                         <!-- IMPRESION DE DATOS SOLICITADOS -->
-                        <div class="row justify-content-center mt-5">
-                            <div class="col-6">
-                                <label class="titleCentral">Resultado obtenido</label>
-                                <p><b><%=session.getAttribute("resulQ2")%></b></p>
+                        <div class="row justify-content-center mt-2">
+                            <div class="col-10">
+                                <label class="textP mt-2">Resultado obtenido</label>
+                                <p class="informeQueries"><b><%=session.getAttribute("resulQ2")%></b></p>
                             </div>
                         </div>
 
-                        <div class="row justify-content-center mt-5" style="height: auto">
+                        <div class="row justify-content-center mt-4" style="height: auto">
                             <div class="col-6">
                                 <a href="Reports.jsp" class="btn btn-success btn-block">Regresar a Reportes</a>				
                             </div>			
@@ -152,13 +147,8 @@
 
     </div>
     <!--FINAL WRAPPER-->    
-
-    <!--<script src="js/security.js"></script> -->    
+   
     <script src="js/colorEfects.js"></script>
-    <script src="js/reports.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/uiFunctions.js"></script>
-    <script src="js/uiMessages.js"></script>
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="js/requeridos/popper.min.js"></script>
     <script src="js/requeridos/bootstrap.min.js"></script>

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : dashboard
-    Created on : 15 dic. 2020, 19:20:30
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,41 +64,17 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ChangeUser.jsp">
-                          <i class="material-icons">face</i>
-                          <p>Cambios Usuario</p>
+                        <a class="nav-link" href="Changes.jsp">
+                          <i class="material-icons">cached</i>
+                          <p>Modificaciones</p>
                         </a>
-                    </li> 
+                    </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ChangeEmployee.jsp">
-                          <i class="material-icons">perm_identity</i>
-                          <p>Cambios Empleado</p>
+                        <a class="nav-link" href="Delete.jsp">
+                          <i class="material-icons">delete</i>
+                          <p>Eliminar Objeto</p>
                         </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeHours.jsp">
-                          <i class="material-icons">query_builder</i>
-                          <p>Cambios Horarios</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeGame.jsp">
-                          <i class="material-icons">build</i>
-                          <p>Cambios Juegos</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeClient.jsp">
-                          <i class="material-icons">assignment_ind</i>
-                          <p>Cambios Clientes</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeInput.jsp">
-                          <i class="material-icons">receipt</i>
-                          <p>Cambios Entradas</p>
-                        </a>
-                    </li> 
+                    </li>                     
                     <li class="nav-item ">
                         <a class="nav-link" href="List.jsp">
                           <i class="material-icons">list</i>
@@ -116,7 +86,7 @@
                           <i class="material-icons">content_paste</i>
                           <p>Informes</p>
                         </a>
-                    </li>                        
+                    </li>                          
                 </ul>
                 <!--FIN DE OPCIONES-->
 
@@ -293,8 +263,7 @@
 
     </div>
     <!--FIN DEL WRAPPER-->
-
-    <!--<script src="js/security.js"></script>-->
+    
     <script src="js/news.js"></script>
     <script src="js/colorEfects.js"></script>
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>

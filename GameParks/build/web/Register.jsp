@@ -1,9 +1,3 @@
-<%-- 
-    Document   : register
-    Created on : 15 dic. 2020, 19:30:46
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,9 +127,8 @@
             </section>
 
         </main>
-        <!--Fin Main-->        
-
-        <script src="js/register.js"></script>
+        <!--Fin Main-->      
+        
         <script src="js/uiFunctions.js"></script>
         <script src="js/uiMessages.js"></script>
         <script src="js/requeridos/jquery-3.3.1.min.js"></script>

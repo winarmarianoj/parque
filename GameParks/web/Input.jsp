@@ -1,9 +1,3 @@
-<%-- 
-    Document   : input
-    Created on : 15 dic. 2020, 19:27:31
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,41 +64,17 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ChangeUser.jsp">
-                          <i class="material-icons">face</i>
-                          <p>Cambios Usuario</p>
+                        <a class="nav-link" href="Changes.jsp">
+                          <i class="material-icons">cached</i>
+                          <p>Modificaciones</p>
                         </a>
-                    </li> 
+                    </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ChangeEmployee.jsp">
-                          <i class="material-icons">perm_identity</i>
-                          <p>Cambios Empleado</p>
+                        <a class="nav-link" href="Delete.jsp">
+                          <i class="material-icons">delete</i>
+                          <p>Eliminar Objeto</p>
                         </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeHours.jsp">
-                          <i class="material-icons">query_builder</i>
-                          <p>Cambios Horarios</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeGame.jsp">
-                          <i class="material-icons">build</i>
-                          <p>Cambios Juegos</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeClient.jsp">
-                          <i class="material-icons">assignment_ind</i>
-                          <p>Cambios Clientes</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeInput.jsp">
-                          <i class="material-icons">receipt</i>
-                          <p>Cambios Entradas</p>
-                        </a>
-                    </li> 
+                    </li>                     
                     <li class="nav-item ">
                         <a class="nav-link" href="List.jsp">
                           <i class="material-icons">list</i>
@@ -116,7 +86,7 @@
                           <i class="material-icons">content_paste</i>
                           <p>Informes</p>
                         </a>
-                    </li>                  
+                    </li>                     
                 </ul>
                 <!--FIN DE OPCIONES-->
 
@@ -188,7 +158,7 @@
                         <div class="card-body">
 
                           <!--INICIO DEL FORMULARIO -->  
-                          <form >
+                          <form action="InputServlet" method="POST">
                             <div class="row my-5">
 
                               <!--DATOS DEL CLIENTE-->
@@ -200,31 +170,31 @@
                               <div class="col-md-3">
                                 <div class="form-group">
                                   <label class="bmd-label-floating">Nombre del Cliente</label>
-                                  <input type="text" class="form-control" id="nameClient">
+                                  <input type="text" class="form-control" id="nameClient" name="nameClient">
                                 </div>
                               </div>
                               <div class="col-md-4">
                                 <div class="form-group">
                                   <label class="bmd-label-floating">Apellido del Cliente</label>
-                                  <input type="text" class="form-control" id="lastNameClient">
+                                  <input type="text" class="form-control" id="lastNameClient" name="lastNameClient">
                                 </div>
                               </div>
                               <div class="col-md-5 my-3">
                                 <div class="form-group">
                                   <label class="bmd-label-floating">DNI del Clietne</label>
-                                  <input type="text" class="form-control" id="dniClient">
+                                  <input type="text" class="form-control" id="dniClient" name="dniClient">
                                 </div>
                               </div>
                               <div class="col-md-3 my-3">
                                 <div class="form-group">
                                   <label class="bmd-label-floating">Telefono o Celular</label>
-                                  <input type="text" class="form-control" id="phoneClient">
+                                  <input type="text" class="form-control" id="phoneClient" name="phoneClient">
                                 </div>
                               </div>
                               <div class="col-md-4 my-3">
                                 <div class="form-group">
                                   <label class="bmd-label-floating">Email para Contactarlo</label>
-                                  <input type="email" class="form-control" id="emailClient">
+                                  <input type="email" class="form-control" id="emailClient" name="emailClient">
                                 </div>
                               </div>
                             </div>
@@ -241,20 +211,22 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Id del Juego</label>
-                                    <input type="text" class="form-control" id="idGame">
+                                    <input type="text" class="form-control" id="idGame" name="idGame">
                                   </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                       <label class="bmd-label-floating">Id del Empleado</label>
-                                      <input type="text" class="form-control" id="idEmployee">
+                                      <input type="text" class="form-control" id="idEmployee" name="idEmployee">
                                     </div>
                                 </div>
                               </div>
                             </div>
                             <!--FIN DATOS DE LA ENTRADA-->
+                            <input type="button" name="Supervisar: Primer Paso" id="btnRegister" value="Supervisar: Primer Paso" " class="btn btn-warning" onclick="formEmtradas(btnEntrada)"/>  
+                            <p><b>Presione Enviar si salio existoso Supervisar</b></p>
                             
-                            <button id="btnEntrada" type="submit" class="btn btn-primary pull-right my-5" onclick="formEmtradas(btnEntrada)">Enviar</button>
+                            <button id="btnEntrada" type="submit" class="btn btn-primary pull-right my-2">Enviar</button>
 
                           </form>
                           <!--FIN DEL FORMULARIO-->
@@ -289,9 +261,10 @@
     </div>
     <!--FINAL WRAPPER--> 
 
-    <!--<script src="js/security.js"></script>-->
     <script src="js/colorEfects.js"></script>
-    <script src="js/input.js"></script>    
+    <script src="js/input.js"></script> 
+    <script src="js/uiFunctions.js"></script>
+    <script src="js/uiMessages.js"></script>
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="js/requeridos/popper.min.js"></script>
     <script src="js/requeridos/bootstrap.min.js"></script>

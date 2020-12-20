@@ -1,3 +1,5 @@
+/* global op, msg */
+
 // funcion que me trae los datos ingresados en el Form de Juegos y Horarios nuevos
 function formJuegos(btnJuegoHorario) {
    
@@ -23,35 +25,6 @@ function formJuegos(btnJuegoHorario) {
     resGameCheck &= op.isNotNullEmpty(gameCheck.categoria, "La Categoria del Juego");
     resGameCheck &= op.isNameCorrect(gameCheck.categoria, "La Categoria del Juego");
 
-    if (resGameCheck){sendingGameHours(JSON.stringify(gameCheck));}
-
-    horaInicio.value = "";
-    horaFin.value = "";
-    gameName.value = "";   
-    edadMinima.value = "";
-    capacidadPersonas.value = "";
-    categoria.value = "";
+    if (resGameCheck){msg.correct();}else{msg.danger();}
 }
 
-function sendingGameHours(datasss) {    
-    fetch('http://localhost:8080/Devs/rest/account/register', {
-        method: 'POST',
-        body: datasss
-    })
-    .then(function(response){
-        if (response.ok){
-            response.json().then(data=>{
-                if(data){           
-                    msg.correct()
-                }else{
-                    msg.danger()
-                }
-            })
-        }else {
-            throw 'Error en la llamada a Ajax';
-        }
-    })  
-    .catch(function(err){
-        msg.danger();
-    });     
-}

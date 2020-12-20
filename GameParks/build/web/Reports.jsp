@@ -1,9 +1,3 @@
-<%-- 
-    Document   : reports
-    Created on : 15 dic. 2020, 19:31:43
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,41 +60,17 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ChangeUser.jsp">
-                          <i class="material-icons">face</i>
+                        <a class="nav-link" href="Changes.jsp">
+                          <i class="material-icons">cached</i>
+                          <p>Modificaciones</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Delete.jsp">
+                          <i class="material-icons">delete</i>
                           <p>Cambios Usuario</p>
                         </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeEmployee.jsp">
-                          <i class="material-icons">perm_identity</i>
-                          <p>Cambios Empleado</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeHours.jsp">
-                          <i class="material-icons">query_builder</i>
-                          <p>Cambios Horarios</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeGame.jsp">
-                          <i class="material-icons">build</i>
-                          <p>Cambios Juegos</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeClient.jsp">
-                          <i class="material-icons">assignment_ind</i>
-                          <p>Cambios Clientes</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeInput.jsp">
-                          <i class="material-icons">receipt</i>
-                          <p>Cambios Entradas</p>
-                        </a>
-                    </li> 
+                    </li>                     
                     <li class="nav-item ">
                         <a class="nav-link" href="List.jsp">
                           <i class="material-icons">list</i>
@@ -112,7 +82,7 @@
                           <i class="material-icons">content_paste</i>
                           <p>Informes</p>
                         </a>
-                    </li>               
+                    </li>                 
                 </ul>
                 <!--FIN DE OPCIONES-->
 
@@ -184,9 +154,9 @@
                   <!--FIN DE BOTONES -->   
                   
                   <!--INICIA FOOTER-->
-                  <footer class="firma">
+                  <footer class="footer">
                     <div class="container-fluid">          
-                      <div class="copyright">
+                      <div class="copyright float-right">
                         &copy;
                         <script>
                           document.write(new Date().getFullYear())
@@ -209,9 +179,6 @@
     <!--FINAL WRAPPER-->    
     
     <script src="js/colorEfects.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/uiFunctions.js"></script>
-    <script src="js/uiMessages.js"></script>
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="js/requeridos/popper.min.js"></script>
     <script src="js/requeridos/bootstrap.min.js"></script>

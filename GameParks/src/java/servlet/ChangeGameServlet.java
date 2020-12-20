@@ -1,16 +1,13 @@
 package servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logica.Juego;
 import logica.controladora.ManagerControl;
-import logica.excepciones.JuegoException;
 
 @WebServlet(name = "ChangeGameServlet", urlPatterns = {"/ChangeGameServlet"})
 public class ChangeGameServlet extends HttpServlet {
@@ -29,21 +26,26 @@ public class ChangeGameServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        boolean res = false;
+        Juego aux = manager.getCjue().traerJuegoEnParticular(Integer.parseInt(request.getParameter("idJuego")));
+        aux.setNombre(request.getParameter("nombreJuego"));
+        aux.setEdadMinima(request.getParameter("edadMinimaJuego"));
+        aux.setCapacidad(request.getParameter("cantidadPersonas"));
+        aux.setCategoria(request.getParameter("categoriaJuego"));        
+        
         try {
-            manager.getCjue().getJue().setNombre(request.getParameter("nombreJuego"));
-            manager.getCjue().getJue().setEdadMinima(request.getParameter("edadMinimaJuego"));
-            manager.getCjue().getJue().setCapacidad(request.getParameter("cantidadPersonas"));
-            manager.getCjue().getJue().setCategoria(request.getParameter("categoriaJuego"));
-            
-            if(manager.getCjue().creaJuego(manager.getCjue().getJue())){
-                request.getSession().setAttribute("resultado", "Los Datos Ingresados del Cambio de un Juego son correctos!");
-                response.sendRedirect("Respuestas.jsp");
-            }else{
-                request.getSession().setAttribute("resultado", "Los Datos Ingresados son incorrectos.");
-                response.sendRedirect("Respuestas.jsp");
-            }
-        } catch (JuegoException ex) {
+            manager.getCjue().modifJuego(aux);
+            res = true;
+        } catch (Exception ex) {
             manager.getErrors().logError(ex.getMessage());
+        }
+            
+        if(res){
+            request.getSession().setAttribute("resultado", "Los Datos Ingresados del Cambio de un Juego son correctos!");
+            response.sendRedirect("Respuestas.jsp");
+        }else{
+            request.getSession().setAttribute("resultado", "Los Datos Ingresados son incorrectos.");
+            response.sendRedirect("Respuestas.jsp");
         }
     }
 

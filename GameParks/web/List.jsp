@@ -60,41 +60,17 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ChangeUser.jsp">
-                          <i class="material-icons">face</i>
-                          <p>Cambios Usuario</p>
+                        <a class="nav-link" href="Changes.jsp">
+                          <i class="material-icons">cached</i>
+                          <p>Modificaciones</p>
                         </a>
-                    </li> 
+                    </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ChangeEmployee.jsp">
-                          <i class="material-icons">perm_identity</i>
-                          <p>Cambios Empleado</p>
+                        <a class="nav-link" href="Delete.jsp">
+                          <i class="material-icons">delete</i>
+                          <p>Eliminar Objeto</p>
                         </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeHours.jsp">
-                          <i class="material-icons">query_builder</i>
-                          <p>Cambios Horarios</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeGame.jsp">
-                          <i class="material-icons">build</i>
-                          <p>Cambios Juegos</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeClient.jsp">
-                          <i class="material-icons">assignment_ind</i>
-                          <p>Cambios Clientes</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeInput.jsp">
-                          <i class="material-icons">receipt</i>
-                          <p>Cambios Entradas</p>
-                        </a>
-                    </li> 
+                    </li>                     
                     <li class="nav-item active">
                         <a class="nav-link" href="List.jsp">
                           <i class="material-icons">list</i>
@@ -106,7 +82,7 @@
                           <i class="material-icons">content_paste</i>
                           <p>Informes</p>
                         </a>
-                    </li>                 
+                    </li>                   
                 </ul>
                 <!--FIN DE OPCIONES-->
 
@@ -176,6 +152,7 @@
                   <a href="ListEmployee.jsp" type="button" class="btn btn-outline-success">Lista de Empleados</a>
                   <a href="ListClient.jsp" type="button" class="btn btn-outline-danger">Lista de Clientes</a>
                   <a href="ListInput.jsp" type="button" class="btn btn-outline-dark">Lista de Entradas</a>                
+                  <a href="ListUsers.jsp" type="button" class="btn btn-outline-warning">Lista de Usuarios</a>                
                   <!--FIN DE BOTONES -->
 
                   <!--INICIO DE LA TABLAS E INFORMES -->
@@ -183,7 +160,7 @@
                     <div class="card card-plain">
 
                       <div class="card-header card-header-primary">
-                        <h4 class="card-title mt-0"> Listados de Juegos / Horarios / Empleados / Clientes / Entradas</h4>
+                        <h4 class="card-title mt-0"> Listados de Juegos / Horarios / Empleados / Clientes / Entradas / Usuarios</h4>
                         <p class="card-category"> Sólo presione el Botón sobre la opción que este necesitando.</p>
                       </div>                      
 
@@ -193,7 +170,7 @@
 
 
                   <!--INICIA FOOTER-->
-                  <footer class="firma">
+                  <footer class="footer">
                     <div class="container-fluid">          
                       <div class="copyright float-right">
                         &copy;
@@ -216,12 +193,8 @@
         
     </div>  
     <!--FINAL WRAPPER--> 
-
       
     <script src="js/colorEfects.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/uiFunctions.js"></script>
-    <script src="js/uiMessages.js"></script>
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="js/requeridos/popper.min.js"></script>
     <script src="js/requeridos/bootstrap.min.js"></script>

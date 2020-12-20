@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Confirmacion
-    Created on : 16 dic. 2020, 19:57:21
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -39,12 +33,11 @@
 		</div>
 
 		<div class="row justify-content-center mt-5" style="height: auto">
-			<div class="col-6">
-                            <a href="Dashboard.jsp" class="btn btn-success btn-block">Regresar al Menú</a>				
-			</div>			
+                    <div class="col-6">
+                        <a href="Dashboard.jsp" class="btn btn-success btn-block">Regresar al Menú</a>				
+                    </div>			
 		</div>		
-	</div>
-        
+	</div>        
         
         <script src="js/requeridos/jquery-3.3.1.min.js"></script>
         <script src="js/requeridos/popper.min.js"></script>

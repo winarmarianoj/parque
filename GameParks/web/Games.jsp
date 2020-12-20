@@ -1,9 +1,3 @@
-<%-- 
-    Document   : games
-    Created on : 15 dic. 2020, 19:25:27
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,41 +63,17 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ChangeUser.jsp">
-                          <i class="material-icons">face</i>
-                          <p>Cambios Usuario</p>
+                        <a class="nav-link" href="Changes.jsp">
+                          <i class="material-icons">cached</i>
+                          <p>Modificaciones</p>
                         </a>
-                    </li> 
+                    </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ChangeEmployee.jsp">
-                          <i class="material-icons">perm_identity</i>
-                          <p>Cambios Empleado</p>
+                        <a class="nav-link" href="Delete.jsp">
+                          <i class="material-icons">delete</i>
+                          <p>Eliminar Objeto</p>
                         </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeHours.jsp">
-                          <i class="material-icons">query_builder</i>
-                          <p>Cambios Horarios</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeGame.jsp">
-                          <i class="material-icons">build</i>
-                          <p>Cambios Juegos</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeClient.jsp">
-                          <i class="material-icons">assignment_ind</i>
-                          <p>Cambios Clientes</p>
-                        </a>
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="ChangeInput.jsp">
-                          <i class="material-icons">receipt</i>
-                          <p>Cambios Entradas</p>
-                        </a>
-                    </li> 
+                    </li>                     
                     <li class="nav-item ">
                         <a class="nav-link" href="List.jsp">
                           <i class="material-icons">list</i>
@@ -115,7 +85,7 @@
                           <i class="material-icons">content_paste</i>
                           <p>Informes</p>
                         </a>
-                    </li>         
+                    </li>           
                 </ul>
                 <!--FIN DE OPCIONES-->
 
@@ -187,7 +157,7 @@
                       <div class="card-body">
 
                         <!--INICIO DEL FORMULARIO -->  
-                        <form >
+                        <form action="GamesServlet" method="POST">
                           <div class="row my-5">
                             <div class="col-md-5">
                               <div class="form-group">
@@ -197,13 +167,13 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label class="bmd-label-floating">Hora de Inicio</label>
-                                <input type="text" class="form-control" id="horaInicio">
+                                <input type="text" class="form-control" id="horaInicio" name="horaInicio">
                               </div>
                             </div>
                             <div class="col-md-4">
                               <div class="form-group">
                                 <label class="bmd-label-floating">Hora de fin</label>
-                                <input type="email" class="form-control" id="horaFin">
+                                <input type="text" class="form-control" id="horaFin" name="horaFin">
                               </div>
                             </div>
                           </div>
@@ -211,30 +181,47 @@
                             <div class="col-md-6">
                               <div class="form-group">
                                 <label class="bmd-label-floating">Nombre del Juego</label>
-                                <input type="text" class="form-control" id="gameName">
+                                <input type="text" class="form-control" id="gameName" name="gameName">
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group">
                                 <label class="bmd-label-floating">Edad Mínima admitida</label>
-                                <input type="text" class="form-control" id="edadMinima">
+                                <input type="text" class="form-control" id="edadMinima" name="edadMinima">
                               </div>
                             </div>
                             <div class="col-md-6 my-3">
                               <div class="form-group">
                                 <label class="bmd-label-floating">Capacidad tolerada</label>
-                                <input type="text" class="form-control" id="capacidadPersonas">
+                                <input type="text" class="form-control" id="capacidadPersonas" name="capacidadPersonas">
                               </div>
                             </div>
                             <div class="col-md-6 my-3">
                               <div class="form-group">
                                 <label class="bmd-label-floating">Categoría del Juego</label>
-                                <input type="text" class="form-control" id="categoria">
+                                <input type="text" class="form-control" id="categoria" name="categoria">
                               </div>
                             </div>                      
                           </div>
+                          <div class="row my-5">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label class="bmd-label-floating">Datos del Empleado</label>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label class="bmd-label-floating">Ingrese su ID de Empleado</label>
+                                <input type="text" class="form-control" id="idEmp" name="idEmp">
+                              </div>
+                            </div>                                                  
+                          </div>
+                            
+                            
+                          <input type="button" name="Supervisar: Primer Paso" id="btnRegister" value="Supervisar: Primer Paso" " class="btn btn-warning"  onclick="formJuegos(btnJuegoHorario)"/>  
+                          <p><b>Presione Enviar si salio existoso Supervisar</b></p>
                           
-                          <button id="btnJuegoHorario" type="submit" class="btn btn-primary pull-right my-5" onclick="formJuegos(btnJuegoHorario)">Enviar</button>
+                          <button id="btnJuegoHorario" type="submit" class="btn btn-primary pull-right ">Enviar</button>
 
                         </form>
                         <!--FIN DEL FORMULARIO-->
@@ -269,9 +256,10 @@
     </div>
     <!--FIN DEL WRAPPER-->
 
-    <!--<script src="js/security.js"></script>-->
     <script src="js/colorEfects.js"></script>
     <script src="js/games.js"></script>
+    <script src="js/uiFunctions.js"></script>
+    <script src="js/uiMessages.js"></script>
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="js/requeridos/popper.min.js"></script>
     <script src="js/requeridos/bootstrap.min.js"></script>

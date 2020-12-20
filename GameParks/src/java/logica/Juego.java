@@ -1,6 +1,7 @@
 package logica;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -78,12 +79,29 @@ public class Juego implements Serializable {
         this.categoria = categoria;
     }
 
+    // METHODS AND FUNCTION GAME LIST
+    
     public List<Empleado> getListaEmpleado() {
+        if (listaEmpleado == null){listaEmpleado = new ArrayList<>();}
         return listaEmpleado;
     }
 
-    public void setListaEmpleado(List<Empleado> listaEmpleado) {
-        this.listaEmpleado = listaEmpleado;
+    public void addEmpleado(Empleado emp) {
+        if (listaEmpleado == null){listaEmpleado = new ArrayList<>();}
+        listaEmpleado.add(emp);
+    }  
+    public int listaEmpleadoSize(){
+        if (listaEmpleado == null){listaEmpleado = new ArrayList<>();}
+        return listaEmpleado.size();
+    }
+    public Empleado searchEmpleado(int index){
+        if (index < 0 || index >= listaEmpleadoSize()){return null;}
+        return listaEmpleado.get(index);
+    }
+    public boolean removeEmpleado(int index){
+        if (index < 0 || index >= listaEmpleadoSize()){return false;}
+        listaEmpleado.remove(index);
+        return true;
     }
     
 }

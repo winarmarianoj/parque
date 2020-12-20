@@ -1,12 +1,12 @@
 package servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logica.Empleado;
 import logica.controladora.ManagerControl;
 
 @WebServlet(name = "ChangeEmpleadoServlet", urlPatterns = {"/ChangeEmpleadoServlet"})
@@ -19,16 +19,25 @@ public class ChangeEmpleadoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+            throws ServletException, IOException {        
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        manager.getCemp().getEmp().setNombre(request.getParameter("changeNameEmpleado"));
-        manager.getCemp().getEmp().setApellido(request.getParameter("changeApellidoEmpleado"));
-        if(manager.getCemp().creaEmpleado(manager.getCemp().getEmp())){
+        boolean res = false;
+        Empleado aux = manager.getCemp().traerEmpleadoEnParticular(Integer.parseInt(request.getParameter("changeIDEmpleado")));
+        aux.setNombre(request.getParameter("changeNameEmpleado"));
+        aux.setApellido(request.getParameter("changeApellidoEmpleado"));
+        
+        try{
+            manager.getCemp().modifEmpleado(aux);
+            res = true;
+        }catch(Exception e){
+            manager.getErrors().logError(e.getMessage());
+        }
+                
+        if(res){
             request.getSession().setAttribute("resultado", "Los Datos Ingresados para el Cambio de un Empleado son correctos!");
             response.sendRedirect("Respuestas.jsp");
         }else{

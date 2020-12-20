@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +38,8 @@ public class Query1Servlet extends HttpServlet {
                 cantEntradas++;
             }
         }
-        request.getSession().setAttribute("resulQ1", "Cantidad de entradas Vendidas en el día :" + " " + fecha + " " + String.valueOf(cantEntradas));
+        request.getSession().setAttribute("resulQ1", "Fecha : " + "  " + " " + fecha + "  " + 
+                "  " + " Cantidad de Entradas Vendidas : " + " " + String.valueOf(cantEntradas));
         response.sendRedirect("Query1.jsp");
     }
 

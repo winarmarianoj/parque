@@ -36,7 +36,7 @@
                             class="form-control form-control-sm bg-light" 
                             placeholder="Contraseña" required="">
                     </div>
-                    <!--onclick="formLogin(btnLogin)"-->
+                    
                     <input type="submit" id="btnLogin" value="Inicio de Sesion"  class="btn btn-sm btn-warning col"/>
 
                     <div class="text-center mt-2">
@@ -77,7 +77,7 @@
 
     <footer></footer>
     
-    <!--<script src="../js/login.js"></script>-->
+    <script src="js/login.js"></script>
     <script src="js/uiFunctions.js"></script>
     <script src="js/uiMessages.js"></script>
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>

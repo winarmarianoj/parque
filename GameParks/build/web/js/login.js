@@ -1,3 +1,5 @@
+/* global op, msg */
+
 // Funcion que me trae del Login HTML
 function formLogin(btnLogin) {    
 

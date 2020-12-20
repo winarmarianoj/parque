@@ -1,10 +1,7 @@
 package servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,22 +34,23 @@ public class LoginServlet extends HttpServlet {
         List<Usuario> listUsu = manager.getCusu().traerUsuario();
         for(Usuario element : listUsu){
             if(element.getNombre().equals(name) && element.getContrasenia().equals(pass)){
-                Usuario usu = element;
-                usu.setConectado(true);
+                
+                /*Usuario usu = element;
+                usu.setConectado(true);*/
+                
+                manager.getCusu().logIn(element);
                 HttpSession sesion = request.getSession(true);
                 sesion.setAttribute("usuario", name);
                 sesion.setAttribute("pass", pass);
                 response.sendRedirect("Dashboard.jsp"); 
+                result = true;
             }
         }
-        /*
-        if(result){
-            
-        } else{
+        
+        if(!result){
             request.getSession().setAttribute("resLog", "El Usuario y Contraseña no fueron cargados o estan vacíos.!");
             response.sendRedirect("ResLogRes.jsp");
         }
-        */
     }
 
     @Override

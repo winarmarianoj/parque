@@ -1,9 +1,3 @@
-<%-- 
-    Document   : gameParkManual
-    Created on : 15 dic. 2020, 19:22:43
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +49,7 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="dashboard.jsp" class="btn btn-primary btn-lg my-5">Regresar al programa</a>
+                    <a href="Dashboard.jsp" class="btn btn-primary btn-lg my-5">Regresar al programa</a>
                     
                     <!--Inicio del Footer-->
                     <footer class="piePagina col-12 s12 m6">

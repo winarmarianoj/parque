@@ -1,3 +1,5 @@
+/* global Swal */
+
 class UIMessages {
     showMessage(info, cssClass) {
         const linksList = document.getElementById('links-list');
@@ -111,6 +113,14 @@ class UIMessages {
             title: 'Error',
             text: text11,
         });
+    }
+    
+    alertDecision(text){
+        Swal.fire({
+            type: 'warning',
+            title: 'Seguridad',
+            text: text,
+        });   
     }
 }
 const msg = new UIMessages();

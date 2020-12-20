@@ -1,9 +1,3 @@
-<%-- 
-    Document   : gameParkSoporte
-    Created on : 15 dic. 2020, 19:24:43
-    Author     : mariano
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +41,7 @@
                             <div>Gracias por estar con Nosotros!!!</div>
                         </div>
                     </div>
-                    <a href="dashboard.jsp" class="btn btn-primary btn-lg my-5">Regresar al programa</a>
+                    <a href="Dashboard.jsp" class="btn btn-primary btn-lg my-5">Regresar al programa</a>
 
                     <!--Inicio del Footer-->
                     <footer class="piePagina col-12 s12 m6">
@@ -77,9 +71,7 @@
             <!--FIN DE SOPORTE-->            
         </div>        
     </main>
-    <!--FIN DEL MAIN-->
-
-    
+    <!--FIN DEL MAIN-->    
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

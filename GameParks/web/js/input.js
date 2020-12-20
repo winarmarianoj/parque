@@ -1,3 +1,5 @@
+/* global op, msg */
+
 // funcion que me trae los datos ingresados en el Form Entrada y Clientes
 function formEmtradas(btnEntrada) {
    
@@ -26,36 +28,6 @@ function formEmtradas(btnEntrada) {
     resInputCheck &= op.isNotNullEmpty(inputCheck.idEmployee, "El ID del Empleado");
     resInputCheck &= op.isNumber(inputCheck.idEmployee, "El ID del Empleado");
 
-    if (resInputCheck){sendingInputClient(JSON.stringify(inputCheck));}
+    if (resInputCheck){msg.correct();}else{msg.danger();}
 
-    nameClient.value = "";
-    lastNameClient.value = "";
-    dniClient.value = "";
-    phoneClient.value = "";     
-    emailClient.value = "";
-    idGame.value = "";
-    idEmployee.value = "";
-}
-
-function sendingInputClient(datassss) {    
-    fetch('http://localhost:8080/Devs/rest/account/register', {
-        method: 'POST',
-        body: datassss
-    })
-    .then(function(response){
-        if (response.ok){
-            response.json().then(data=>{
-                if(data){           
-                    msg.correct()
-                }else{
-                    msg.danger()
-                }
-            })
-        }else {
-            throw 'Error en la llamada a Ajax';
-        }
-    })  
-    .catch(function(err){
-        msg.danger();
-    });     
 }

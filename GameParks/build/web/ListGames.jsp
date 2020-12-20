@@ -105,7 +105,7 @@
                         </div>
                       </div>
                         <div class="col-6">
-                            <a href="Dashboard.jsp" class="btn btn-success btn-block">Regresar al Menú</a>				
+                            <a href="List.jsp" class="btn btn-success btn-block">Regresar al Menú</a>				
                         </div>
                     </div>
                   </div>
@@ -136,12 +136,8 @@
         
     </div>  
     <!--FINAL WRAPPER--> 
-
     
-    <script src="js/colorEfects.js"></script>    
-    <script src="js/ui.js"></script>
-    <script src="js/uiFunctions.js"></script>
-    <script src="js/uiMessages.js"></script>
+    <script src="js/colorEfects.js"></script> 
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="js/requeridos/popper.min.js"></script>
     <script src="js/requeridos/bootstrap.min.js"></script>

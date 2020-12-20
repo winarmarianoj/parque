@@ -1,3 +1,5 @@
+/* global msg */
+
 const emailRegex = /^([a-zA-Z0-9-_.ñ]+)@([a-zA-Z0-9-_.ñ]+).([a-zA-Z]{2,5})$/;
 const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 const namesRegex = /^([a-zA-ZñÑ])+$/;
