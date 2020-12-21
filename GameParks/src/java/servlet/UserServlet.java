@@ -9,14 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import logica.Usuario;
 import logica.controladora.ManagerControl;
-import logica.excepciones.EmpleadoException;
 import logica.excepciones.UsuarioException;
-import logica.util.PasswordEncryptor;
 
 @WebServlet(name = "UserServlet", urlPatterns = {"/UserServlet"})
 public class UserServlet extends HttpServlet {
-    ManagerControl manager = ManagerControl.getInstante();
-    PasswordEncryptor encryptor = new PasswordEncryptor();
+    ManagerControl manager = ManagerControl.getInstante();    
     private Usuario usuario = null;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -37,7 +34,7 @@ public class UserServlet extends HttpServlet {
         
         // Tomo datos
         String nameUsu = request.getParameter("nameUser");
-	String securePass = encryptor.generateSecurePassword(request.getParameter("passUser"));
+        String pass = String.valueOf(request.getParameter("passUser1"));	
         String nameEmp = request.getParameter("nameEmployee");
         String apeEmp = request.getParameter("lastNameEmployee");
         
@@ -46,7 +43,7 @@ public class UserServlet extends HttpServlet {
         // Verifico si existe el Usuario o no
         if(!searchUsu(nameUsu)){
             manager.getCusu().getUsuario().setNombre(nameUsu);
-            manager.getCusu().getUsuario().setContrasenia(securePass);        
+            manager.getCusu().getUsuario().setPass(pass);
             manager.getCusu().getUsuario().setConectado(conectado);
             
             try {

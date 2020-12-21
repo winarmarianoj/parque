@@ -88,7 +88,7 @@
                                                 <p class="textP">Recuerde verificar el Número de ID a través de las consultas en la Opción Listados</p>
                                             </div>                                                          
                                           </div>                                         
-                                          <input type="button" name="Supervisar: Primer Paso" id="deleteEntrada" value="Supervisar: Primer Paso" " class="btn btn-warning"/>  
+                                          <input type="button" name="Supervisar: Primer Paso" id="deleteInput" value="Supervisar: Primer Paso" " class="btn btn-warning"/>  
                                             <p><b>Presione Enviar si salio existoso Supervisar</b></p>
                                           <button id="btnChangeCliente" type="submit" class="btn btn-primary pull-right my-2" >Enviar</button>
                                           <a href="Delete.jsp" class="btn btn-success ">Regresar al Menú</a>

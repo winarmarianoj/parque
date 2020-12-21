@@ -73,27 +73,38 @@
                                 <div class="col-md-8">
                                   <div class="card">
                                     <div class="card-header card-header-primary">
-                                      <h4 class="card-title">Entrada a Eliminar</h4>
+                                      <h4 class="card-title">Desconectarse</h4>
                                     </div>
                                     <div class="card-body">
 
                                         <!--INICIO DEL FORMULARIO -->  
-                                        <form action="DeleteInputServlet" method="POST" >                                          
+                                        <form action="LogoutServlet" method="POST" >                                          
                                           <div class="row my-4">
                                             <div class="col-md-4">
                                               <div class="form-group">
-                                                <label class="bmd-label-floating">ID del Entrada</label>
-                                                <input type="text" class="form-control" id="idDeleteEntrada" name="idDeleteEntrada">
-                                              </div>
-                                                <p class="textP">Recuerde verificar el Número de ID a través de las consultas en la Opción Listados</p>
+                                                  <label class="bmd-label-floating">ID del Usuario</label>
+                                                  <%
+                                                        
+                                                    String usuario = (String) request.getSession().getAttribute("usuario");
+                                                    if(usuario == null){
+                                                        request.getSession().setAttribute("resLogReg", "El Usuario y Contraseña no fueron cargados o estan vacíos.!");
+                                                        response.sendRedirect("ResLogRes.jsp");
+                                                    }else{
+                                                    %>
+                                                                                                  
+                                                    <p><b><%=usuario%></b></p>
+                                                    <p>Si es correcto su nombre de Usuario, vuelva a Escribirlo en el Campo siguiente:</p>
+                                                    <input name="usuLogout" >
+                                                    
+                                              </div>                                                
                                             </div>                                                          
-                                          </div>                                         
-                                          <input type="button" name="Supervisar: Primer Paso" id="deleteInput" value="Supervisar: Primer Paso" " class="btn btn-warning"/>  
-                                            <p><b>Presione Enviar si salio existoso Supervisar</b></p>
-                                          <button id="btnChangeCliente" type="submit" class="btn btn-primary pull-right my-2" >Enviar</button>
-                                          <a href="Delete.jsp" class="btn btn-success ">Regresar al Menú</a>
+                                          </div>                                                                                   
+                                          <button id="btnChangeCliente" type="submit" class="btn btn-primary pull-right my-2" >Desconectarse</button>
+                                          <a href="Dashboard.jsp" class="btn btn-success ">Regresar al Menú</a>
 
                                         </form>
+                                                    <% }
+                                                        %>
                                         <!--FIN DEL FORMULARIO-->
                                     </div>
                                   </div>
@@ -134,7 +145,7 @@
     </div>
     <!--FIN DEL WRAPPER-->
     
-    <script src="js/deleteInput.js"></script>
+    <script src="js/deleteUser.js"></script>
     <script src="js/colorEfects.js"></script>
     <script src="js/uiFunctions.js"></script>
     <script src="js/uiMessages.js"></script>

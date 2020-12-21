@@ -92,9 +92,9 @@
                         <div class="datos">
                             <p class="">&copy; 2020 Game Park</p>
                             <ul class="list-inline">
-                                <li class="list-inline-item"><a href="gameParkNosotros.jsp">Nosotros</a></li>
-                                <li class="list-inline-item"><a href="gameParkManual.jsp">Manual</a></li>
-                                <li class="list-inline-item"><a href="gameParkSoporte.jsp">Soporte</a></li>
+                                <li class="list-inline-item"><a href="GameParkNosotros.jsp">Nosotros</a></li>
+                                <li class="list-inline-item"><a href="GameParkManual.jsp">Manual</a></li>
+                                <li class="list-inline-item"><a href="GameParkSoporte.jsp">Soporte</a></li>
                             </ul>
                             <ul>
                                 <li class=" list-inline-item"><img src="logos/smallLogos/facebook.png" alt=""></li>
@@ -134,6 +134,9 @@
                     </li>
                     <li>
                       <button class="btn btn-dark" id="btnNight" onclick="formColorsNight(btnNight)" data-toggle="tooltip" data-placement="top" title="Estilo Noche"><img src="icons/luna.png" alt=""></button>
+                    </li>
+                    <li>
+                      <a href="Logout.jsp" type="button" class="btn btn-dark" id="btnLogout" data-toggle="tooltip" data-placement="top" title="Logout"><img src="icons/logout.png" alt=""></a>
                     </li>                    
                   </ul>
                 </div>
@@ -149,7 +152,7 @@
                   <!--INICIO DE BOTONES -->
                   <a href="DeleteClient.jsp" type="button" class="btn btn-primary">Eliminar Cliente</a>
                   <a href="DeleteEmployee.jsp" type="button" class="btn btn-secondary">Eliminar Empleado</a>
-                  <a href="DeleteHours.jsp" type="button" class="btn btn-success">Eliminar Horario</a>
+                  <a href="DeleteHour.jsp" type="button" class="btn btn-success">Eliminar Horario</a>
                   <a href="DeleteInput.jsp" type="button" class="btn btn-danger">Eliminar Entrada</a>
                   <a href="DeleteUser.jsp" type="button" class="btn btn-warning">Eliminar Usuario</a>
                   <a href="DeleteGame.jsp" type="button" class="btn btn-info">Eliminar Juego</a>

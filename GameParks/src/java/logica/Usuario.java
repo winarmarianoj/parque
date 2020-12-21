@@ -14,21 +14,17 @@ public class Usuario {
     
     @Basic
     String nombre;
-    String contrasenia;
+    String pass;
     boolean conectado;
 
     public Usuario() {
     }
-    public Usuario(String nombre, String contraseña, boolean conectado){
-        this.nombre = nombre;
-        this.contrasenia = contrasenia;
-        this.conectado = conectado;
-    }
 
-    public Usuario(int usuario_id, String nombre, String contrasenia, boolean conectado) {
-        this.usuario_id = usuario_id;
-        
-    }
+    public Usuario(String nombre, String pass, boolean conectado) {        
+        this.nombre = nombre;
+        this.pass = pass;
+        this.conectado = conectado;
+    }  
     
     public int getUsuario_id() {
         return usuario_id;
@@ -46,13 +42,13 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getContrasenia() {
-        return contrasenia;
+    public String getPass() {
+        return pass;
     }
 
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
-    }
+    public void setPass(String pass) {
+        this.pass = pass;
+    }   
 
     public boolean isConectado() {
         return conectado;
@@ -60,14 +56,7 @@ public class Usuario {
 
     public void setConectado(boolean conectado) {
         this.conectado = conectado;
-    }
+    }   
     
-    public void logueoEmpleado() {
-        setConectado(true);
-    }
-    
-    public void logoutEmpleado(){
-        setConectado(false);
-    }
         
 }

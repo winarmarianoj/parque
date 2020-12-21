@@ -92,9 +92,9 @@
                         <div class="datos">
                             <p class="">&copy; 2020 Game Park</p>
                             <ul class="list-inline">
-                                <li class="list-inline-item"><a href="gameParkNosotros.jsp">Nosotros</a></li>
-                                <li class="list-inline-item"><a href="gameParkManual.jsp">Manual</a></li>
-                                <li class="list-inline-item"><a href="gameParkSoporte.jsp">Soporte</a></li>
+                                <li class="list-inline-item"><a href="GameParkNosotros.jsp">Nosotros</a></li>
+                                <li class="list-inline-item"><a href="GameParkManual.jsp">Manual</a></li>
+                                <li class="list-inline-item"><a href="GameParkSoporte.jsp">Soporte</a></li>
                             </ul>
                             <ul>
                                 <li class=" list-inline-item"><img src="logos/smallLogos/facebook.png" alt=""></li>
@@ -134,7 +134,10 @@
                       </li>
                       <li>
                         <button class="btn btn-dark" id="btnNight" onclick="formColorsNight(btnNight)" data-toggle="tooltip" data-placement="top" title="Estilo Noche"><img src="icons/luna.png" alt=""></button>
-                      </li>                      
+                      </li> 
+                      <li>
+                        <a href="Logout.jsp" type="button" class="btn btn-dark" id="btnLogout" data-toggle="tooltip" data-placement="top" title="Logout"><img src="icons/logout.png" alt=""></a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -151,7 +154,20 @@
                   <a href="Query1.jsp" type="button" class="btn btn-outline-warning">Cantidad de Entradas en un Día</a>
                   <a href="Query2.jsp" type="button" class="btn btn-outline-info">Cant Entradas-Empleado-Juego-Dia</a>
                   <a href="Query3.jsp" type="button" class="btn btn-outline-primary">Empleados por un Juego</a>
-                  <!--FIN DE BOTONES -->   
+                  <!--FIN DE BOTONES --> 
+                  
+                  <!--INICIO DE LA TABLAS E INFORMES -->
+                  <div class="col-md-12">
+                    <div class="card card-plain">
+
+                      <div class="card-header card-header-primary">
+                        <h4 class="card-title mt-0"> Informes Solicitados</h4>
+                        <p class="card-category"> Sólo presione el Botón sobre la opción que este necesitando.</p>
+                      </div>                      
+
+                    </div>
+                  </div>
+                  <!--FIN DE LA TABLAS E INFORMES -->
                   
                   <!--INICIA FOOTER-->
                   <footer class="footer">

@@ -134,7 +134,10 @@
                     </li>
                     <li>
                       <button class="btn btn-dark" id="btnNight" onclick="formColorsNight(btnNight)" data-toggle="tooltip" data-placement="top" title="Estilo Noche"><img src="icons/luna.png" alt=""></button>
-                    </li>                    
+                    </li>
+                    <li>
+                        <a href="Logout.jsp" type="button" class="btn btn-dark" id="btnLogout" data-toggle="tooltip" data-placement="top" title="Logout"><img src="icons/logout.png" alt=""></a>
+                    </li>                     
                   </ul>
                 </div>
               </div>

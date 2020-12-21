@@ -10,8 +10,10 @@ changeEmp.addEventListener('click', () => {
     
     let res = op.isNotNullEmpty(id, "El Id");
     res &= op.isNumber(id, "El Id");
+    
     res &= op.isNotNullEmpty(name, "El Nombre");  
-    res &= op.isNameCorrect(name, "El Nombre");    
+    res &= op.isNameCorrect(name, "El Nombre");  
+    
     res &= op.isNotNullEmpty(ape, "El Apellido");  
     res &= op.isNameCorrect(ape, "El Apellido");   
     

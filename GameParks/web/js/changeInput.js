@@ -12,12 +12,16 @@ changeEntrada.addEventListener('click', () => {
     
     let res = op.isNotNullEmpty(id, "El Id");
     res &= op.isNumber(id, "El Id");
+    
     res &= op.isNotNullEmpty(fecha, "La Fecha");
     res &= op.isNumber(fecha, "La Fecha");
+    
     res &= op.isNotNullEmpty(idCli, "ID del Cliente");
     res &= op.isNumber(idCli, "ID del Cliente");
+    
     res &= op.isNotNullEmpty(idEmp, "ID del Empleado");
     res &= op.isNumber(idEmp, "ID del Empleado");
+    
     res &= op.isNotNullEmpty(idJue, "ID del Juego");
     res &= op.isNumber(idJue, "ID del Juego");
     

@@ -34,7 +34,7 @@ public class ForgotServlet extends HttpServlet {
         Usuario user = searchUser(name);
         
         if(pass1.equals(pass2)){
-            user.setContrasenia(pass1);
+            user.setPass(pass1);
             manager.getCusu().modifUsuario(user);
             request.getSession().setAttribute("resLogReg", "Los Datos Ingresados para cambiar Su Contraseña son correctos!");
             response.sendRedirect("ResLogRes.jsp");            

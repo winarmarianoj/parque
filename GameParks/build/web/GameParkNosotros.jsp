@@ -59,9 +59,9 @@
                             <div class="datos">
                                 <p class="">&copy; 2020 GamePark</p>
                                 <ul class="list-inline">
-                                    <li class="list-inline-item"><a href="gameParkNosotros.jsp">Nosotros</a></li>
-                                    <li class="list-inline-item"><a href="gameParkManual.jsp">Manual</a></li>
-                                    <li class="list-inline-item"><a href="gameParkSoporte.jsp">Soporte</a></li>
+                                    <li class="list-inline-item"><a href="GameParkNosotros.jsp">Nosotros</a></li>
+                                    <li class="list-inline-item"><a href="GameParkManual.jsp">Manual</a></li>
+                                    <li class="list-inline-item"><a href="GameParkSoporte.jsp">Soporte</a></li>
                                 </ul>
                                 <ul>
                                     <li class="list-inline-item"><img src="logos/facebook.png" alt=""></li>

@@ -14,9 +14,8 @@ import logica.excepciones.UsuarioException;
 public class Validar {
     
     public boolean validUser(Usuario usu) throws UsuarioException{
-        boolean res = validaInfo(usu.getNombre());
-        String algo = String.valueOf(usu.getContrasenia());
-        res &= validaInfo(algo);
+        boolean res = validaInfo(usu.getNombre());        
+        res &= validaInfo(usu.getPass());
         
         if(!res){throw new UsuarioException();}
         

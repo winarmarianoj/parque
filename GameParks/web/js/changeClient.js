@@ -13,21 +13,26 @@ changeCli.addEventListener('click', () => {
     
     let res = op.isNotNullEmpty(id, "El Id");
     res &= op.isNumber(id, "El Id");
+    
     res &= op.isNotNullEmpty(name, "El Nombre");  
-    res &= op.isNameCorrect(name, "El Nombre");    
+    res &= op.isNameCorrect(name, "El Nombre"); 
+    
     res &= op.isNotNullEmpty(ape, "El Apellido");  
-    res &= op.isNameCorrect(ape, "El Apellido"); 
+    res &= op.isNameCorrect(ape, "El Apellido");
+    
     res &= op.isNotNullEmpty(dni, "El DNI");
     res &= op.isNumber(dni, "El DNI");
+    
     res &= op.isNotNullEmpty(tel, "El Telefono");
     res &= op.isNumber(tel, "El Telefono");
+    
     res &= op.isNotNullEmpty(mail, "El Mail");  
-    res &= op.isNameCorrect(mail, "El Mail"); 
+    res &= op.isEmailCorrect(mail, "El Mail"); 
     
     sendMsg(res);
 })
 
-function sendMsg(res){    
+function sendMsg(res){   
     
     if(res){msg.correct();}else{msg.danger();}
 }

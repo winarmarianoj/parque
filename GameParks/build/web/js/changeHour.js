@@ -10,8 +10,10 @@ changeHours.addEventListener('click', () => {
     
     let res = op.isNotNullEmpty(id, "El Id");
     res &= op.isNumber(id, "El Id");
+    
     res &= op.isNotNullEmpty(ini, "La Hora de Inicio");
     res &= op.isNumber(ini, "La Hora de Inicio");
+    
     res &= op.isNotNullEmpty(fin, "La Hora de Fin");
     res &= op.isNumber(fin, "La Hora de Fin");
     

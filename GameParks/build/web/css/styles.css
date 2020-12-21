@@ -107,8 +107,6 @@ div.imagen img:hover{
   text-align: center;
 }
 
-
-
 table,tr,td,th{
 	border: 1px double black;		
 }
@@ -118,4 +116,26 @@ th{
 }
 td{
 	color: blue;
+}
+
+/* MEDIAS QUERIES*/
+
+@media (min-width: 450px) {
+    .cuerpo{max-width: 380px;}    
+}
+
+@media (min-width: 600px) {
+    .cuerpo{max-width: 540px;}
+}
+  
+@media (min-width: 768px) {
+    .cuerpo{max-width: 720px;}
+}  
+
+@media (min-width: 992px) {
+    .cuerpo{max-width: 960px;}
+}
+
+@media (min-width: 1200px) {
+    .cuerpo{max-width: 100%;}
 }

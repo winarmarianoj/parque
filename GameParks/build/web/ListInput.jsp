@@ -72,9 +72,9 @@
                     <div class="card card-plain">
 
                       <div class="card-header card-header-primary">
-                        <h4 class="card-title mt-0"> Listados de Entradas</h4>                       
+                        <h4 class="card-title mt-0">Listados de Entradas</h4>                       
                       </div>
-
+                        
                       <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-hover" id="reportTable">
@@ -107,7 +107,7 @@
                                       <td><%=ent.getCliente().getApellido()%></td>
                                       <td><%=ent.getEmpleado().getEmpleado_id()%></td>
                                       <td><%=ent.getEmpleado().getNombre()%></td>
-                                      <td><%=ent.getEmpleado().getApellido()%></td>|
+                                      <td><%=ent.getEmpleado().getApellido()%></td>
                                       <td><%=ent.getJuego().getJuego_id()%></td>
                                       <td><%=ent.getJuego().getNombre()%></td>
                                     </tr>

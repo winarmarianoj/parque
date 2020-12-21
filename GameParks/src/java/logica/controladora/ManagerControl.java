@@ -1,9 +1,5 @@
 package logica.controladora;
 
-
-import logica.Empleado;
-import logica.Usuario;
-import logica.excepciones.UsuarioException;
 import logica.factory.ControladoraFactory;
 import logica.logger.Errors;
 
@@ -33,14 +29,6 @@ public class ManagerControl {
             manager = new ManagerControl();
         }
         return manager;
-    }
-    
-    public boolean logIn(Usuario usu){
-        return cusu.logIn(usu);
-    }
-
-    public boolean logOut(Usuario usu){
-        return cusu.logOut(usu);
     }    
 
     // Getters de todos los Controladores

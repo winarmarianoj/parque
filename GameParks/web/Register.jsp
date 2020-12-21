@@ -52,6 +52,7 @@
                                             <div class="invalid-feedback">
                                                 Por favor ingrese su contraseña.
                                             </div>
+                                            <p class="txtRegister">Al menos una Minúscula, Mayúscula, un Número, un Símbolo, y mínimo de 8 caracteres.</p>
                                         </div>
                                         <div class="col-md-4 mb-5">
                                             <label id="labels" for="password2">Repita Contraseña</label>
@@ -85,13 +86,10 @@
                                 </div>                                
 
                                 <!-- BOTON SUPERVISA Y REGISTRA -->
-                                <input type="button" name="Supervisar: Primer Paso" id="btnRegister" value="Supervisar: Primer Paso" onclick="formRegister(btnRegister)" class="btn btn-warning"/>  
+                                <input type="button" name="Supervisar: Primer Paso" id="btnRegister" value="Supervisar: Primer Paso" class="btn btn-warning"/>  
                                 <p class="msgBtn"><b>Presione Enviar si salio existoso Supervisar</b></p>
                                 <button type="submit" class="btn btn-primary my-5" ">Enviar</button>
-                                
-                                <div class="text-center mt-2 my-4">
-                                    <a href="Login.jsp" class="text-warning">Volver al login si se ha equivocado de opción</a>
-                                </div>
+                                <button href="Login.jsp" class="btn btn-success my-5">Volver al Login</button>                                
                             </form>
                             <!--FIN DEL FORMULARIO REGISTER-->                            
                         </div>                           
@@ -129,6 +127,7 @@
         </main>
         <!--Fin Main-->      
         
+        <script src="js/register.js"></script>
         <script src="js/uiFunctions.js"></script>
         <script src="js/uiMessages.js"></script>
         <script src="js/requeridos/jquery-3.3.1.min.js"></script>

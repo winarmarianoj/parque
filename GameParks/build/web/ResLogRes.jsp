@@ -25,7 +25,7 @@
 		<div class="row justify-content-center mt-5">
 			<div class="col-6">
 				<label class="titleCentral">Resultado obtenido</label>
-                                <p><b><%=session.getAttribute("resLog")%></b></p>
+                                <p><b><%=session.getAttribute("resLogReg")%></b></p>
 			</div>
 		</div>
 

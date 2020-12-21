@@ -22,7 +22,7 @@ public class ControlUsuario {
     }    
     
     //Crea Usuario
-    public boolean creaUsuario(Usuario usu) throws UsuarioException{
+    public boolean creaUsuario(Usuario usu) throws UsuarioException{        
         boolean res = false;
         try{
             if(!searchUsuario(usu)){
@@ -66,19 +66,7 @@ public class ControlUsuario {
             }
         }
         return res;
-    }
-
-    public boolean logIn(Usuario usu){
-        usu.setConectado(true);
-        modifUsuario(usu);
-        return true;
-    }
-    
-    public boolean logOut(Usuario usu){
-        usu.setConectado(false);
-        modifUsuario(usu);
-        return true;
-    }
+    }    
 
     public Usuario getUsuario() {
         return usuario;

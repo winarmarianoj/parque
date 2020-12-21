@@ -35,17 +35,19 @@
                         <div class="ml-3">
                             <ul>
                                 <h2><b>Opciones y Operaciones de la Barra de Menú Lateral Izquiera Vertical</b></h2><br>
-                                <li>Noticias en general, Clima, y demás...</li>
+                                <li>Noticias en general, Clima, Sectores, Publicidades...</li>
                                 <li>Nuevo Juego y Horario, es para ingresar o dar de Alta un Juego con su Horario.</li>
                                 <li>Nueva Entrada y Cliente, es para Generar una nueva entrada y un nuevo cliente, asignando además el Id del Juego al cual va a participar, y el Id del Empleado que lo realiza. En el caso que no recuerdes los id de cada uno solicitados y requeridos, podés acceder a los Listados y buscarlo por ese medio.</li>
-                                <li>Listados, va a generar según cada petición de los Botones en pantalla, los Listado de Clientes, Listado de Empleado, Listado de Horarios, Listado de Juegos, todos y cada unos actuales en el sistema.</li>
-                                <li>Informes solicitados por la gerencian, en donde se podrán ir agregando más en caso que sea necesario y pedido.</li><br>
+                                <li>Modificaciones, al ingresar encontrarás Botones con su descripción para poder ir y Modificar contenido de cada tipo de objeto.</li>
+                                <li>Eliminar Objeto, allí tendrás un grupo de botones para elegir y te llevará al ID del tipo de Objeto que quieras y necesites eliminar.</li>
+                                <li>Listados, va a generar según cada petición de los Botones en pantalla, los Listado de Clientes, Listado de Empleado, Listado de Horarios, Listado de Juegos, Listado de Usuarios, Listado de Entradas, todos y cada unos actuales en el sistema.</li>
+                                <li>Informes solicitados por la gerencia, en donde se podrán ir agregando más en caso que sea necesario y pedido.</li><br>
                                 <h2><b>Opciones en la Barra de Menú Superior Derecha</b></h2><br>
                                 <li>Botón con el color de fondo inicial y por default.</li>
                                 <li>Botón con un color más cremoso y menos brilloso.</li>
                                 <li>Botón con un color gris semi oscuro sin brillo, para el descanso de la vista.</li>
                                 <li>Botón estilo noche o dark.</li>
-                                <li>Botón del Logout, es decir para cerrar la sesión del usuario.</li>
+                                <li>Botón del Logout, es decir para cerrar y salir, por el cual volverás al Login.</li>
                             </ul>
                         </div>
                     </div>
@@ -57,9 +59,9 @@
                             <div class="datos">
                                 <p class="">&copy; 2020 Game Park</p>
                                 <ul class="list-inline">
-                                    <li class="list-inline-item"><a href="gameParkNosotros.jsp">Nosotros</a></li>
-                                    <li class="list-inline-item"><a href="gameParkManual.jsp">Manual</a></li>
-                                    <li class="list-inline-item"><a href="gameParkSoporte.jsp">Soporte</a></li>
+                                    <li class="list-inline-item"><a href="GameParkNosotros.jsp">Nosotros</a></li>
+                                    <li class="list-inline-item"><a href="GameParkManual.jsp">Manual</a></li>
+                                    <li class="list-inline-item"><a href="GameParkSoporte.jsp">Soporte</a></li>
                                 </ul>
                                 <ul>
                                     <li class="list-inline-item"><img src="logos/facebook.png" alt=""></li>

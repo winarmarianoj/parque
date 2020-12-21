@@ -96,9 +96,9 @@
                         <div class="datos">
                             <p class="">&copy; 2020 Game Park</p>
                             <ul class="list-inline">
-                                <li class="list-inline-item"><a href="gameParkNosotros.jsp">Nosotros</a></li>
-                                <li class="list-inline-item"><a href="gameParkManual.jsp">Manual</a></li>
-                                <li class="list-inline-item"><a href="gameParkSoporte.jsp">Soporte</a></li>
+                                <li class="list-inline-item"><a href="GameParkNosotros.jsp">Nosotros</a></li>
+                                <li class="list-inline-item"><a href="GameParkManual.jsp">Manual</a></li>
+                                <li class="list-inline-item"><a href="GameParkSoporte.jsp">Soporte</a></li>
                             </ul>
                             <ul>
                                 <li class=" list-inline-item"><img src="logos/smallLogos/facebook.png" alt=""></li>
@@ -137,7 +137,10 @@
                 </li>
                 <li>
                   <button class="btn btn-dark" id="btnNight" onclick="formColorsNight(btnNight)" data-toggle="tooltip" data-placement="top" title="Estilo Noche"><img src="icons/luna.png" alt=""></button>
-                </li>                
+                </li>
+                <li>
+                  <a href="Logout.jsp" type="button" class="btn btn-dark" id="btnLogout" data-toggle="tooltip" data-placement="top" title="Logout"><img src="icons/logout.png" alt=""></a>
+                </li> 
               </ul>
             </div>
           </div>
@@ -223,10 +226,10 @@
                               </div>
                             </div>
                             <!--FIN DATOS DE LA ENTRADA-->
-                            <input type="button" name="Supervisar: Primer Paso" id="btnRegister" value="Supervisar: Primer Paso" " class="btn btn-warning" onclick="formEmtradas(btnEntrada)"/>  
+                            <button id="btnSuperInput"  type="button" value="Supervisar: Primer Paso" class="btn btn-warning my-2">Supervisar: Primer Paso</button>
                             <p><b>Presione Enviar si salio existoso Supervisar</b></p>
                             
-                            <button id="btnEntrada" type="submit" class="btn btn-primary pull-right my-2">Enviar</button>
+                            <button id="btnInput" type="submit" class="btn btn-primary pull-right my-2">Enviar</button>
 
                           </form>
                           <!--FIN DEL FORMULARIO-->
@@ -262,7 +265,7 @@
     <!--FINAL WRAPPER--> 
 
     <script src="js/colorEfects.js"></script>
-    <script src="js/input.js"></script> 
+    <script src="js/tickets.js"></script>
     <script src="js/uiFunctions.js"></script>
     <script src="js/uiMessages.js"></script>
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>
