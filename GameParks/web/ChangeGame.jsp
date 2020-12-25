@@ -1,3 +1,4 @@
+<%@page import="logica.Juego"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +30,94 @@
     %>
 
     <div class="wrapper ">
+        
+        <header>
+
+          <!--INICIA MENU LATERAL IZQUIERDO-->
+          <div class="sidebar" data-color="danger" data-background-color="white">
+          
+            <div class="logo row d-flex justify-content-center align-items-center pb-4">
+              <img src="img/logos.png" width="30%" alt="">
+              <a href="" class="simple-text logo-normal">Game Park</a>
+            </div>
+
+            <div class="sidebar-wrapper">
+
+                <!--INICIO OPCIONES-->
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Dashboard.jsp">
+                          <i class="material-icons">dashboard</i>
+                          <p>Noticias en General</p>
+                        </a>
+                    </li> 
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Games.jsp">
+                          <i class="material-icons">power_settings_new</i>
+                          <p>Nuevo Juego y Horario</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Input.jsp">
+                          <i class="material-icons">input</i>
+                          <p>Nueva Entrada y Cliente</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Changes.jsp">
+                          <i class="material-icons">cached</i>
+                          <p>Modificaciones</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Delete.jsp">
+                          <i class="material-icons">delete</i>
+                          <p>Eliminar Objeto</p>
+                        </a>
+                    </li>                     
+                    <li class="nav-item ">
+                        <a class="nav-link" href="List.jsp">
+                          <i class="material-icons">list</i>
+                          <p>Listados</p>
+                        </a>
+                    </li> 
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Reports.jsp">
+                          <i class="material-icons">content_paste</i>
+                          <p>Informes</p>
+                        </a>
+                    </li>                 
+                </ul>
+                <!--FIN DE OPCIONES-->
+
+                <!--Inicio del Footer-->
+                <section class="col-12 s12 m6 institucional">
+                    <div class="col-12 s12 m6 text-muted text-center text-small">
+                        <div class="datos">
+                            <p class="">&copy; 2020 Game Park</p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="gameParkNosotros.jsp">Nosotros</a></li>
+                                <li class="list-inline-item"><a href="gameParkManual.jsp">Manual</a></li>
+                                <li class="list-inline-item"><a href="gameParkSoporte.jsp">Soporte</a></li>
+                            </ul>
+                            <ul>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/facebook.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/instagram.png" alt=""></li>         
+                                <li class=" list-inline-item"><img src="logos/smallLogos/twiter.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/linkedin.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/whatsapp.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/youtube.png" alt=""></li>
+                            </ul>            
+                        </div>
+                    </div>
+                </section>
+                <!--Fin del Footer-->
+
+            </div>          
+
+          </div>
+          <!--FIN MENU LATERAL IZQUIERDO-->
+        </header>
 
       <!--INICIA PANEL DERECHO COMPLETO-->
       <div class="main-panel">
@@ -76,6 +165,10 @@
                                       <h4 class="card-title">Juego a Cambiar</h4>
                                     </div>
                                     <div class="card-body">
+                                        
+                                        <%
+                                            Juego juego = (Juego) request.getSession().getAttribute("juego");    
+                                        %>
 
                                         <!--INICIO DEL FORMULARIO -->  
                                         <form action="ChangeGameServlet" method="POST">                                          
@@ -83,20 +176,20 @@
                                             <div class="col-md-4">
                                               <div class="form-group">
                                                 <label class="bmd-label-floating">ID del Juego</label>
-                                                <input type="text" class="form-control" id="idJuego" name="idJuego" >
+                                                <input type="text" class="form-control" id="idJuego" name="idJuego" value="<%=juego.getJuego_id()%>">
                                               </div>
                                             </div>     
                                             
                                             <div class="col-md-4">
                                               <div class="form-group">
                                                 <label class="bmd-label-floating">Nombre del Juego</label>
-                                                <input type="text" class="form-control" id="nombreJuego" name="nombreJuego">
+                                                <input type="text" class="form-control" id="nombreJuego" name="nombreJuego" value="<%=juego.getNombre()%>">
                                               </div>
                                             </div>
                                             <div class="col-md-4">
                                               <div class="form-group">
                                                 <label class="bmd-label-floating">Edad Minima Admitida</label>
-                                                <input type="text" class="form-control" id="edadMinimaJuego" name="edadMinimaJuego">
+                                                <input type="text" class="form-control" id="edadMinimaJuego" name="edadMinimaJuego" value="<%=juego.getEdadMinima()%>">
                                               </div>
                                             </div>
                                                                             
@@ -105,13 +198,13 @@
                                             <div class="col-md-4">
                                               <div class="form-group">
                                                 <label class="bmd-label-floating">Capacidad de Personas</label>
-                                                <input type="text" class="form-control" id="cantidadPersonas" name="cantidadPersonas">
+                                                <input type="text" class="form-control" id="cantidadPersonas" name="cantidadPersonas" value="<%=juego.getCapacidad()%>">
                                               </div>
                                             </div>       
                                             <div class="col-md-4">
                                               <div class="form-group">
                                                 <label class="bmd-label-floating">Categoría del Juego</label>
-                                                <input type="text" class="form-control" id="categoriaJuego" name="categoriaJuego">
+                                                <input type="text" class="form-control" id="categoriaJuego" name="categoriaJuego" value="<%=juego.getCategoria()%>">
                                               </div>
                                             </div>                                  
                                           </div>
@@ -120,8 +213,7 @@
                                           <input type="button" name="Supervisar: Primer Paso" id="changeJuego" value="Supervisar: Primer Paso" " class="btn btn-warning"/>  
                                           <p><b>Presione Enviar si salio existoso Supervisar o Regrese al Menú</b></p>
                                           <button id="btnChangeJuego" type="submit" class="btn btn-primary pull-right my-2">Enviar</button>
-                                          <a href="Changes.jsp" class="btn btn-success ">Regresar al Menú</a>
-
+                                          
                                         </form>
                                         <!--FIN DEL FORMULARIO-->
                                     </div>

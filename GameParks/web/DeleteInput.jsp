@@ -1,3 +1,6 @@
+<%@page import="logica.Entrada"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +32,94 @@
     %>
 
     <div class="wrapper ">
+        
+        <header>
+
+          <!--INICIA MENU LATERAL IZQUIERDO-->
+          <div class="sidebar" data-color="danger" data-background-color="white">
+          
+            <div class="logo row d-flex justify-content-center align-items-center pb-4">
+              <img src="img/logos.png" width="30%" alt="">
+              <a href="" class="simple-text logo-normal">Game Park</a>
+            </div>
+
+            <div class="sidebar-wrapper">
+
+                <!--INICIO OPCIONES-->
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Dashboard.jsp">
+                          <i class="material-icons">dashboard</i>
+                          <p>Noticias en General</p>
+                        </a>
+                    </li> 
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Games.jsp">
+                          <i class="material-icons">power_settings_new</i>
+                          <p>Nuevo Juego y Horario</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Input.jsp">
+                          <i class="material-icons">input</i>
+                          <p>Nueva Entrada y Cliente</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Changes.jsp">
+                          <i class="material-icons">cached</i>
+                          <p>Modificaciones</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Delete.jsp">
+                          <i class="material-icons">delete</i>
+                          <p>Eliminar Objeto</p>
+                        </a>
+                    </li>                     
+                    <li class="nav-item ">
+                        <a class="nav-link" href="List.jsp">
+                          <i class="material-icons">list</i>
+                          <p>Listados</p>
+                        </a>
+                    </li> 
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Reports.jsp">
+                          <i class="material-icons">content_paste</i>
+                          <p>Informes</p>
+                        </a>
+                    </li>                 
+                </ul>
+                <!--FIN DE OPCIONES-->
+
+                <!--Inicio del Footer-->
+                <section class="col-12 s12 m6 institucional">
+                    <div class="col-12 s12 m6 text-muted text-center text-small">
+                        <div class="datos">
+                            <p class="">&copy; 2020 Game Park</p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="GameParkNosotros.jsp">Nosotros</a></li>
+                                <li class="list-inline-item"><a href="GameParkManual.jsp">Manual</a></li>
+                                <li class="list-inline-item"><a href="GameParkSoporte.jsp">Soporte</a></li>
+                            </ul>
+                            <ul>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/facebook.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/instagram.png" alt=""></li>         
+                                <li class=" list-inline-item"><img src="logos/smallLogos/twiter.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/linkedin.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/whatsapp.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/youtube.png" alt=""></li>
+                            </ul>            
+                        </div>
+                    </div>
+                </section>
+                <!--Fin del Footer-->
+
+            </div>          
+
+          </div>
+          <!--FIN MENU LATERAL IZQUIERDO-->
+        </header>
 
       <!--INICIA PANEL DERECHO COMPLETO-->
       <div class="main-panel">
@@ -61,7 +152,7 @@
             <div class="container-fluid dash">
               <div class="row">
 
-                  <section class="columna2 col-9 offset-fixed f-right">
+                  <section class="columna2 col-12 offset-fixed f-right">
                       <!--INICIO DE LA TABLAS E INFORMES -->
                       <div class="col-md-12">
                         <div class="card card-plain"> 
@@ -84,14 +175,12 @@
                                               <div class="form-group">
                                                 <label class="bmd-label-floating">ID del Entrada</label>
                                                 <input type="text" class="form-control" id="idDeleteEntrada" name="idDeleteEntrada">
-                                              </div>
-                                                <p class="textP">Recuerde verificar el Número de ID a través de las consultas en la Opción Listados</p>
+                                              </div>                                                
                                             </div>                                                          
                                           </div>                                         
                                           <input type="button" name="Supervisar: Primer Paso" id="deleteInput" value="Supervisar: Primer Paso" " class="btn btn-warning"/>  
                                             <p><b>Presione Enviar si salio existoso Supervisar</b></p>
-                                          <button id="btnChangeCliente" type="submit" class="btn btn-primary pull-right my-2" >Enviar</button>
-                                          <a href="Delete.jsp" class="btn btn-success ">Regresar al Menú</a>
+                                          <button id="btnChangeCliente" type="submit" class="btn btn-primary pull-right my-2" >Enviar</button>                                         
 
                                         </form>
                                         <!--FIN DEL FORMULARIO-->
@@ -107,7 +196,68 @@
                         </div>
                       </div>
                       <!--FIN DE LA TABLAS E INFORMES -->
-                  </section>    
+                  </section> 
+                  
+                  <section class="columna2 col-12 offset-fixed f-right">
+                      <!--INICIA SECCION DE INFORMES Y TABLAS -->
+            <div class="content">
+              <div class="container-fluid">
+                <div class="row">                  
+
+                  <!--INICIO DE LA TABLAS E INFORMES -->
+                  <div class="col-md-12">
+                    <div class="card card-plain">
+
+                      <div class="card-header card-header-primary">
+                        <h4 class="card-title mt-0">Listados de Entradas</h4>                       
+                      </div>
+                        
+                      <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="reportTable">
+                                <thead>
+                                    <tr>
+                                      <th>ID Entrada</th>
+                                      <th>Fecha</th>
+                                      <th>Cliente ID</th>
+                                      <th>Cliente Nombre</th>
+                                      <th>Cliente Apellido</th>
+                                      <th>Empleado ID</th>
+                                      <th>Empleado Nombre</th>
+                                      <th>Empleado Apellido</th>
+                                      <th>Juego ID</th>
+                                      <th>Juego Nombre</th>
+                                     </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <%	
+                                        List<Entrada> listEnt = (List<Entrada>) sesion.getAttribute("entDeleteList");
+                                        for (Entrada ent : listEnt) { 
+                                %>
+                                      <td><%=ent.getEntrada_id()%></td>
+                                      <td><%=ent.getFecha()%></td>
+                                      <td><%=ent.getCliente().getCliente_id()%></td>
+                                      <td><%=ent.getCliente().getNombre()%></td>
+                                      <td><%=ent.getCliente().getApellido()%></td>
+                                      <td><%=ent.getEmpleado().getEmpleado_id()%></td>
+                                      <td><%=ent.getEmpleado().getNombre()%></td>
+                                      <td><%=ent.getEmpleado().getApellido()%></td>
+                                      <td><%=ent.getJuego().getJuego_id()%></td>
+                                      <td><%=ent.getJuego().getNombre()%></td>
+                                    </tr>
+
+                                      <% } %>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                      </div>                       
+                    </div>
+                  </div>
+                  <!--FIN DE LA TABLAS E INFORMES -->
+                  </section>
                   
               </div>
             </div>

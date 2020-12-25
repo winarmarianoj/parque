@@ -10,11 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 import logica.Usuario;
 import logica.controladora.ManagerControl;
 import logica.excepciones.UsuarioException;
+import logica.util.PasswordEncryptor;
 
 @WebServlet(name = "UserServlet", urlPatterns = {"/UserServlet"})
 public class UserServlet extends HttpServlet {
-    ManagerControl manager = ManagerControl.getInstante();    
-    private Usuario usuario = null;
+    ManagerControl manager = ManagerControl.getInstante();     
+    private Usuario usuario = null;    
+    private PasswordEncryptor encryptor;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -29,21 +31,24 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        encryptor = new PasswordEncryptor();
         boolean conectado = false;
         boolean resultado = false;
         
+        
         // Tomo datos
         String nameUsu = request.getParameter("nameUser");
-        String pass = String.valueOf(request.getParameter("passUser1"));	
+        String pass = request.getParameter("passUser1");	
         String nameEmp = request.getParameter("nameEmployee");
         String apeEmp = request.getParameter("lastNameEmployee");
         
-        // Creo un Usuario        
+        // Creo un Usuario 
+        String passEncrypted = encryptor.generateSecurePassword(pass);
         
         // Verifico si existe el Usuario o no
         if(!searchUsu(nameUsu)){
             manager.getCusu().getUsuario().setNombre(nameUsu);
-            manager.getCusu().getUsuario().setPass(pass);
+            manager.getCusu().getUsuario().setPass(passEncrypted);
             manager.getCusu().getUsuario().setConectado(conectado);
             
             try {

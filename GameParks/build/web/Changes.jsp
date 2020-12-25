@@ -150,12 +150,29 @@
                 <div class="row">
 
                   <!--INICIO DE BOTONES -->
-                  <a href="ChangeClient.jsp" type="button" class="btn btn-primary">Cambiar Cliente</a>
-                  <a href="ChangeEmployee.jsp" type="button" class="btn btn-secondary">Cambiar Empleado</a>
-                  <a href="ChangeHours.jsp" type="button" class="btn btn-success">Cambiar Horario</a>
-                  <a href="ChangeInput.jsp" type="button" class="btn btn-danger">Cambiar Entrada</a>
-                  <a href="ChangeUser.jsp" type="button" class="btn btn-warning">Cambiar Usuario</a>
-                  <a href="ChangeGame.jsp" type="button" class="btn btn-info">Cambiar Juego</a>
+                  <form action="ListClientServlet" method="POST">
+                      <button type="submit" class="btn btn-primary">Cambiar Cliente</button>                        
+                  </form>
+                        
+                  <form action="ListEmployeeServlet" method="POST">
+                        <button type="submit" class="btn btn-secondary">Cambiar Empleado</button>
+                  </form>
+                  
+                  <form action="ListGameServlet" method="POST">
+                        <button type="submit" class="btn btn-info">Cambiar Juego</button>
+                  </form>
+                  
+                  <form action="ListHourServlet" method="POST">
+                        <button type="submit" class="btn btn-success">Cambiar Horario</button>
+                  </form>
+                  
+                  <form action="ListInputServlet" method="POST">
+                        <button type="submit" class="btn btn-danger">Cambiar Entrada</button>
+                  </form>
+                  
+                  <form action="ListUserServlet" method="POST">
+                        <button type="submit" class="btn btn-warning">Cambiar Usuario</button>
+                  </form>
                   <!--FIN DE BOTONES -->
 
                   <!--INICIO DE LA TABLAS E INFORMES -->
@@ -197,7 +214,7 @@
     </div>  
     <!--FINAL WRAPPER--> 
       
-    <script src="js/colorEfects.js"></script>
+    <script src="js/colorEfects.js"></script>  
     <script src="js/requeridos/jquery-3.3.1.min.js"></script>
     <script src="js/requeridos/popper.min.js"></script>
     <script src="js/requeridos/bootstrap.min.js"></script>

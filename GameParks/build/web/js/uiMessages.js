@@ -117,8 +117,16 @@ class UIMessages {
     
     alertDecision(text){
         Swal.fire({
-            type: 'warning',
+            type: 'question',
             title: 'Seguridad',
+            text: text,
+        });   
+    }
+    
+    info(text){
+        Swal.fire({
+            type: 'info',
+            title: 'Estado Actual',
             text: text,
         });   
     }

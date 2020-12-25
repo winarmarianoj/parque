@@ -150,12 +150,29 @@
                 <div class="row">
 
                   <!--INICIO DE BOTONES -->
-                  <a href="DeleteClient.jsp" type="button" class="btn btn-primary">Eliminar Cliente</a>
-                  <a href="DeleteEmployee.jsp" type="button" class="btn btn-secondary">Eliminar Empleado</a>
-                  <a href="DeleteHour.jsp" type="button" class="btn btn-success">Eliminar Horario</a>
-                  <a href="DeleteInput.jsp" type="button" class="btn btn-danger">Eliminar Entrada</a>
-                  <a href="DeleteUser.jsp" type="button" class="btn btn-warning">Eliminar Usuario</a>
-                  <a href="DeleteGame.jsp" type="button" class="btn btn-info">Eliminar Juego</a>
+                  <form action="ListDeleteClientServlet" method="POST">
+                      <button type="submit" class="btn btn-primary">Eliminar Cliente</button>                        
+                  </form>
+                        
+                  <form action="ListDeleteEmployeeServlet" method="POST">
+                        <button type="submit" class="btn btn-secondary">Eliminar Empleado</button>
+                  </form>
+                  
+                  <form action="ListDeleteGameServlet" method="POST">
+                        <button type="submit" class="btn btn-info">Eliminar Juego</button>
+                  </form>
+                  
+                  <form action="ListDeleteHourServlet" method="POST">
+                        <button type="submit" class="btn btn-success">Eliminar Horario</button>
+                  </form>
+                  
+                  <form action="ListDeleteInputServlet" method="POST">
+                        <button type="submit" class="btn btn-danger">Eliminar Entrada</button>
+                  </form>
+                  
+                  <form action="ListDeleteUserServlet" method="POST">
+                        <button type="submit" class="btn btn-warning">Eliminar Usuario</button>
+                  </form>
                   <!--FIN DE BOTONES -->
 
                   <!--INICIO DE LA TABLAS E INFORMES -->

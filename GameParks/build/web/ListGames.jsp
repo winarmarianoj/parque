@@ -29,7 +29,95 @@
         response.sendRedirect("ResLogRes.jsp");
     }else{
     %>
-    <div class="wrapper ">     
+    <div class="wrapper ">   
+        
+        <header>
+
+          <!--INICIA MENU LATERAL IZQUIERDO-->
+          <div class="sidebar" data-color="orange" data-background-color="white">
+          
+            <div class="logo row d-flex justify-content-center align-items-center pb-4">
+              <img src="img/logos.png" width="30%" alt="">
+              <a href="" class="simple-text logo-normal">Game Park</a>
+            </div>
+
+            <div class="sidebar-wrapper">
+
+                <!--INICIO OPCIONES-->
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Dashboard.jsp">
+                          <i class="material-icons">dashboard</i>
+                          <p>Noticias en General</p>
+                        </a>
+                    </li> 
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Games.jsp">
+                          <i class="material-icons">power_settings_new</i>
+                          <p>Nuevo Juego y Horario</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Input.jsp">
+                          <i class="material-icons">input</i>
+                          <p>Nueva Entrada y Cliente</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Changes.jsp">
+                          <i class="material-icons">cached</i>
+                          <p>Modificaciones</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Delete.jsp">
+                          <i class="material-icons">delete</i>
+                          <p>Eliminar Objeto</p>
+                        </a>
+                    </li>                     
+                    <li class="nav-item active">
+                        <a class="nav-link" href="List.jsp">
+                          <i class="material-icons">list</i>
+                          <p>Listados</p>
+                        </a>
+                    </li> 
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Reports.jsp">
+                          <i class="material-icons">content_paste</i>
+                          <p>Informes</p>
+                        </a>
+                    </li>                   
+                </ul>
+                <!--FIN DE OPCIONES-->
+
+                <!--Inicio del Footer-->
+                <section class="col-12 s12 m6 institucional">
+                    <div class="col-12 s12 m6 text-muted text-center text-small">
+                        <div class="datos">
+                            <p class="">&copy; 2020 Game Park</p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="GameParkNosotros.jsp">Nosotros</a></li>
+                                <li class="list-inline-item"><a href="GameParkManual.jsp">Manual</a></li>
+                                <li class="list-inline-item"><a href="GameParkSoporte.jsp">Soporte</a></li>
+                            </ul>
+                            <ul>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/facebook.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/instagram.png" alt=""></li>         
+                                <li class=" list-inline-item"><img src="logos/smallLogos/twiter.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/linkedin.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/whatsapp.png" alt=""></li>
+                                <li class=" list-inline-item"><img src="logos/smallLogos/youtube.png" alt=""></li>
+                            </ul>            
+                        </div>
+                    </div>
+                </section>
+                <!--Fin del Footer-->
+
+            </div>          
+
+          </div>
+          <!--FIN MENU LATERAL IZQUIERDO-->
+        </header>
       
 
         <!--INICIA PANEL DERECHO COMPLETO-->
@@ -104,9 +192,6 @@
                             </table>
                         </div>
                       </div>
-                        <div class="col-6">
-                            <a href="List.jsp" class="btn btn-success btn-block">Regresar al Menú</a>				
-                        </div>
                     </div>
                   </div>
                   <!--FIN DE LA TABLAS E INFORMES -->
