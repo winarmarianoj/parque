@@ -1,8 +1,0 @@
-Suposiciones:
-
-1- Suponiendo que todos los juegos estan habilitados para su uso todos los días.
-
-2- Suponiendo que no nos interesa las categorías de los juegos, ni tampoco respecto a las edades a quienes los puedan utilizar, aunque esten ingresados como dato, me refiero a una validación respecto a ese tema.
-
-3- Suponiendo que no hace falta realizar el cambio de turno de los empleados, ya que no podrían estar en el puesto mas de 8 horas seguidas todos los días.
-
